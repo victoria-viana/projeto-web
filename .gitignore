@@ -1,3 +1,4 @@
+.vscode
 node_modules
 backend/src/tmp
 backend/node_modules/
