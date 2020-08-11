@@ -1,0 +1,61 @@
+form .input-wrapper{
+    position: relative;
+    margin-bottom: 13px;
+    min-width: 213px;
+}
+
+form .input-wrapper .label{
+    font-size: 16px;
+    color: #888;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-100%);
+    transition: all .2s ease-in-out;
+}
+
+form .input-wrapper.active .label{
+    font-size: 12px;
+    top: 7px;
+    background-color: #fff;
+    padding: 0 5px;
+    color: #29166f;
+}
+
+form .input-wrapper .input input{
+    border: 1px solid #888;
+    outline: none;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px 13px;
+    height: 40px;
+    font-size: 16px;
+}
+
+form .input-wrapper.active .input input{
+    border: 2px solid #29166f;
+}
+
+form .input-wrapper.icon .input input{
+    padding: 10px 40px 10px 13px;
+}
+
+form .input-wrapper .input .icon{
+    display: none;
+}
+
+form .input-wrapper.icon .input .icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 13px;
+    top: 8px;
+}
+
+form .input-wrapper .helper-text{
+    padding-left: 13px;
+    margin-top: 3px;
+    font-size: 12px;
+    color: #888;
+}
