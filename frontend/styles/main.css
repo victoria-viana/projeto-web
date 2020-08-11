@@ -58,6 +58,9 @@
     border: 0;
     outline: none;
 }
+.form-wrapper form button.login{
+    width: 100%;
+}
 header, nav{
     width: 100%;
 }
@@ -240,6 +243,9 @@ form input[type="file"]{
 }
 
 @media (min-width: 1366px) {
+    .form-wrapper form button.login{
+        width: 100% !important;
+    }
     .site-header{
         height: 60px;
         padding: 12px 40px;

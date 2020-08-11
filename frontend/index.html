@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rode Transportes</title>
         <link href="styles/main.css" rel="stylesheet" type="text/css">
+        <link href="styles/forms.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
@@ -15,13 +16,52 @@
                 </div>
                 <div class="form-wrapper">
                     <form>
-                        <input type="text">
-                        <input type="password">
-                        <a href="#">Esqueci minha senha</a>
-                        <button type="submit">ENTRAR</button>
+                        <div class="input-wrapper">
+                            <div class="label">Usuário</div>
+                            <div class="input">
+                                <input type="text">
+                            </div>
+                            <div class="helper-text">CPF</div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <div class="label">Senha</div>
+                            <div class="input">
+                                <input type="password">
+                            </div>
+                            <div class="helper-text">use pelo menos 6 caracteres</div>
+                        </div>
+
+                        <button type="submit" class="login">ENTRAR</button>
                     </form>
                 </div>
             </div>
         </div>
+
+        <script>
+    
+            document.addEventListener('DOMContentLoaded', function () {
+                let inputs = document.querySelectorAll('.input-wrapper');
+            
+                inputs.forEach(input => {
+                    if(input.querySelector('.input input').value.length === 0){
+                        input.classList.remove('active');
+                    }else{
+                        input.classList.add('active');
+                    }
+    
+                    input.querySelector('.input input').addEventListener('blur', () =>{
+                        if(input.querySelector('.input input').value.length === 0){
+                            input.classList.remove('active');
+                        }else{
+                            input.classList.add('active');
+                        }
+                    });
+                    input.querySelector('.input input').addEventListener('focus', () =>{
+                        input.classList.add('active');
+                    });
+                });  
+            });
+        </script>
     </body>
 </html>
