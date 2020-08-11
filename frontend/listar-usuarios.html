@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="form-wrapper new">
-                    <form action="">
+                    <form>
 
                         <div class="input-wrapper icon search">
                             <div class="label">Buscar usuário</div>
@@ -152,31 +152,29 @@
                 </symbol>
             </defs>
         </svg>
-    </body>
-
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function () {
-            let inputs = document.querySelectorAll('.input-wrapper');
-        
-            inputs.forEach(input => {
-                if(input.querySelector('.input input').value.length === 0){
-                    input.classList.remove('active');
-                }else{
-                    input.classList.add('active');
-                }
-
-                input.querySelector('.input input').addEventListener('blur', () =>{
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                let inputs = document.querySelectorAll('.input-wrapper');
+            
+                inputs.forEach(input => {
                     if(input.querySelector('.input input').value.length === 0){
                         input.classList.remove('active');
                     }else{
                         input.classList.add('active');
                     }
-                });
-                input.querySelector('.input input').addEventListener('focus', () =>{
-                    input.classList.add('active');
-                });
-            });  
-        });
-    </script>
+    
+                    input.querySelector('.input input').addEventListener('blur', () =>{
+                        if(input.querySelector('.input input').value.length === 0){
+                            input.classList.remove('active');
+                        }else{
+                            input.classList.add('active');
+                        }
+                    });
+                    input.querySelector('.input input').addEventListener('focus', () =>{
+                        input.classList.add('active');
+                    });
+                });  
+            });
+        </script>
+    </body>
 </html>
