@@ -1,22 +1,21 @@
 form .input-wrapper{
     position: relative;
     margin-bottom: 13px;
-    min-width: 213px;
+    min-width: 100%;
 }
 
 form .input-wrapper .label{
     font-size: 16px;
     color: #888;
     position: absolute;
-    top: 50%;
+    top: 10px;
     left: 13px;
-    transform: translateY(-100%);
     transition: all .2s ease-in-out;
 }
 
 form .input-wrapper.active .label{
     font-size: 12px;
-    top: 7px;
+    top: -7px;
     background-color: #fff;
     padding: 0 5px;
     color: #29166f;
@@ -53,9 +52,27 @@ form .input-wrapper.icon .input .icon{
     top: 8px;
 }
 
+form .input-wrapper.icon .input .icon svg{
+    fill: #888;
+}
+
+form .input-wrapper.icon.active .input .icon svg{
+    fill: #29166f;
+}
+
 form .input-wrapper .helper-text{
     padding-left: 13px;
     margin-top: 3px;
     font-size: 12px;
     color: #888;
+}
+
+@media (min-width: 1366px){
+    form .input-wrapper{        
+        min-width: 328px;
+    }
+
+    form button{
+        width: 141px !important;
+    }
 }
