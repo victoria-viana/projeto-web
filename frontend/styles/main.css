@@ -12,7 +12,6 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 .logo-wrapper{
@@ -100,6 +99,65 @@ header, nav{
     height: 100%;
 }
 
+.site-content{
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content.center{
+    align-items: center;
+}
+
+.site-content .title{
+    margin-top: 43px;
+}
+
+.site-content .title h1{
+    font-size: 24px;
+}
+
+.site-content nav.actions{
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.site-content nav.actions a{
+    text-decoration: none;
+}
+
+.site-content nav.actions a .action{
+    width: 156px;
+    height: 156px;
+    border-radius: 8px;
+    margin-bottom: 19px;
+    background-color: #29166f;
+    padding-top: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav.actions a .action .icon{
+    width: 66px;
+    height: 66px;   
+}
+
+nav.actions a .action .icon svg{
+    fill: #fff;   
+}
+
+nav.actions a .action .text{
+    color: #fff;
+    text-align: center;
+    margin-top: 11px;
+    font-size: 18px;
+    max-width: 120px;
+}
+
 @media (min-width: 1366px) {
     .site-header{
         height: 60px;
@@ -119,5 +177,26 @@ header, nav{
     .site-header .user-nav .profile-img{
         width: 36px;
         height: 36px;
+    }
+
+    .site-content{
+        padding: 0 39px;
+    }
+    .site-content .title{
+        margin-top: 25px;
+    }
+    
+    .site-content nav.actions{
+        max-width: 1366px;
+    }
+    
+    .site-content nav.actions a .action{
+        width: 273px;
+        height: 162px;
+        padding-top: 25px;
+    }
+    nav.actions a .action .text{
+        margin-top: 23px;
+        max-width: 100%;
     }
 }
