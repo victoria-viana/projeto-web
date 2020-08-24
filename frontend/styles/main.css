@@ -21,12 +21,18 @@
 .form-wrapper{
     margin-top: 69px;
 }
+.form-wrapper.new{
+    margin-top: 18px;
+}
 .form-wrapper form{
     display: flex;
     width: 316px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+.form-wrapper.new form{
+    width: 100%;
 }
 .form-wrapper form input{
     width: 100%;
@@ -51,6 +57,9 @@
     font-size: 14px;
     border: 0;
     outline: none;
+}
+.form-wrapper form button.login{
+    width: 100%;
 }
 header, nav{
     width: 100%;
@@ -158,7 +167,90 @@ nav.actions a .action .text{
     max-width: 120px;
 }
 
+form .profile-file-input{
+    position: relative;
+    width: 72px;
+    cursor: pointer;
+    height: 72px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background-color: rgba(41, 22, 111, .3);
+}
+
+form .profile-file-input .icon-pencil{
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+form input[type="file"]{
+    display: none;
+}
+
+.results-wrapper{
+    margin-top: 40px;
+}
+
+.results-wrapper .result:last-child{
+    margin-bottom: 0;
+}
+
+.results-wrapper .result{
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #29166f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 13px;
+    margin-bottom: 18px;
+}
+
+.results-wrapper .result.disabled, .results-wrapper .result.disabled *{
+    opacity: 0.7;
+    cursor: not-allowed !important;
+}
+
+.results-wrapper .result .name{
+    font-size: 16px;
+    color: #fff;
+}
+
+.results-wrapper .result .actions{
+    display: flex;
+}
+
+.results-wrapper .result .actions div{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.results-wrapper .result .actions .desable{
+    margin-left: 11px;
+}
+
+.results-wrapper .result.disabled .actions .desable{
+    display: none;
+}
+
+.results-wrapper .result .actions div svg{
+    fill: #fff;
+}
+
+.form-box{
+border 2px;
+border-color: #29166f;
+}
+
 @media (min-width: 1366px) {
+    .form-wrapper form button.login{
+        width: 100% !important;
+    }
     .site-header{
         height: 60px;
         padding: 12px 40px;
@@ -185,9 +277,13 @@ nav.actions a .action .text{
     .site-content .title{
         margin-top: 25px;
     }
+    .site-content .title h1{
+        font-size: 48px;
+    }
     
     .site-content nav.actions{
         max-width: 1366px;
+        flex-wrap: nowrap;
     }
     
     .site-content nav.actions a .action{
@@ -198,5 +294,40 @@ nav.actions a .action .text{
     nav.actions a .action .text{
         margin-top: 23px;
         max-width: 100%;
+    }
+
+    form .profile-file-input{
+        margin-right: calc(100% - 72px);
+    }
+
+    .form-wrapper.new form{
+        width: 679px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    form .input-wrapper.search{
+        min-width: 672px;
+    }
+
+    .results-wrapper{
+        width: 672px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .results-wrapper .result{
+        max-width: 328px;
+    }
+
+    .site-content nav.actions{
+
+        justify-content: flex-start;
+    }
+    .site-content nav.actions .action{
+
+        margin-right: 100px;
     }
 }
