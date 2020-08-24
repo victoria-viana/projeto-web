@@ -306,10 +306,6 @@ border-color: #29166f;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .form-wrapper.new form button{
-        width: 100px;
-        
-    }
 
     form .input-wrapper.search{
         min-width: 672px;
