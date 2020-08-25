@@ -7,7 +7,21 @@
 }
 .menu-wrapper{
     width: 100%;
+    display: relative   ;
 }
+.menu-wrapper.perfil{
+    width: 100%;
+}
+
+.menu-wrapper.perfil .menu-perfil{
+    width: 200px;
+    height: 100vh;
+    background-color: #29166f;
+    position: absolute;
+    left: 178px;
+    
+}
+
 .menu{
     width: 200px;
     height: 100vh;
@@ -44,8 +58,10 @@
 
 .menu-content .menu-services .services{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    
 }
+
 .menu-content .icon{
     width: 26px;
     height: 26px;
@@ -54,4 +70,23 @@
 }
 .menu-content .icon svg{
     fill: #fff;
+}
+
+.menu-content nav  .text{
+    color: #fff;
+}
+
+.menu-content nav .register{
+    color: #fff;
+}
+
+.menu-content nav .view{
+    color: #fff;
+}
+
+.menu-content .menu-users .users{
+    display: flex;
+    width: ;
+    
+    
 }
