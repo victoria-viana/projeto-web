@@ -1,11 +1,11 @@
 const express = require('express');
-
 const routes = express.Router();
+const UserController = require('./controllers/UserController');
 
-routes.get('/', async (req, res) => {
-    res.send(
-        '<h1>olá</h1>'
-    );
-});
+
+routes.get('/users', UserController.index);
+
+routes.post('/users', UserController.create);
+
 
 module.exports = routes;
