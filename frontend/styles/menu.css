@@ -42,4 +42,16 @@
     text-decoration:none;
 }
 
-.menu-content .icon{}
+.menu-content .menu-services .services{
+    display: flex;
+    align-items: center;
+}
+.menu-content .icon{
+    width: 26px;
+    height: 26px;
+    margin-left: 4px;
+    margin-top: 40px;
+}
+.menu-content .icon svg{
+    fill: #fff;
+}
