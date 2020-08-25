@@ -3,65 +3,74 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home - Rode Transportes</title>
-        <link href="styles/main.css" rel="stylesheet" type="text/css">
+        <title>Rode Transportes</title>
+        <link href="styles/menu.css" rel="stylesheet" type="text/css">
+        
     </head>
 
     <body>
-        <div class="site-wrapper">
-            <header>
-                <nav>
-                    <div class="site-header">
-                        <div class="app-nav">
-                            <div class="menu-icon">
-                                <svg width='100%' height='100%' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-menu'></use>
-                                </svg>
-                            </div>
-                            <a href="/">
-                                <div class="logo">
-                                    <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
+       <div class="menu-wrapper">
+           <header>
+               <div class="menu">
+                <div class="menu-header">
+                    <div class="menu-icon">
+                        <svg width='100%' height='100%' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                            <use href='#icon-menu'></use>
+                        </svg>
+                    </div>
+                    <a href="/">
+                        <div class="logo">
+                            <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
+                        </div>
+                    </a>
+                </div>
+                <div class="menu-content">
+                    <nav>
+                        <div class="menu-users">
+                            <div class="users">
+                                <div class="icon">
+                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-user'></use>
+                                    </svg>
                                 </div>
+                                <div class="text">Usuário</div>
+                            </div>
+                            <div class="menu-actions">
+                                <a href="#">
+                                    <div class="register">Cadastrar Usuário</div>
+                                </a>
+                                <a href="#">
+                                    <div class="view">Visualizar Usuários</div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="menu-services">
+                            <div class="services">
+                                <div class="services-wrapper">
+                                    <div class="icon">
+                                        <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                            <use href='#icon-services'></use>
+                                        </svg>
+                                    </div>
+                                    <div class="text">Serviço</div>
+                                </div>
+                                </div>
+                                
+                            <a href="#">
+                                <div class="register">Cadastrar Serviço</div>
+                            </a>
+                            <a href="#">
+                                <div class="view">Visualizar Serviços</div>
                             </a>
                         </div>
+                    </nav>
+                </div>
+               </div>
+               
+           </header>
+       </div>
 
-                        <div class="user-nav">
-                            <div class="profile-img">
-                                <img src="./assets/imgs/avatar.png" alt="Imagem de perfil" title="Imagem de perfil">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu opened">
-
-                        <a href="/cadastrar-usuario.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-user'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">cadastrar usuário</div>
-                            </div>
-                        </a>
-
-                        <a href="#">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-user'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">listar usuários</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="profile"></div>
-                </nav>
-            </header>
-
-        </div>
         <svg>
             <defs>
                 <symbol id="icon-menu">
@@ -90,5 +99,31 @@
                 </symbol>
             </defs>
         </svg>
+
+        <script>
+    
+            document.addEventListener('DOMContentLoaded', function () {
+                let inputs = document.querySelectorAll('.input-wrapper');
+            
+                inputs.forEach(input => {
+                    if(input.querySelector('.input input').value.length === 0){
+                        input.classList.remove('active');
+                    }else{
+                        input.classList.add('active');
+                    }
+    
+                    input.querySelector('.input input').addEventListener('blur', () =>{
+                        if(input.querySelector('.input input').value.length === 0){
+                            input.classList.remove('active');
+                        }else{
+                            input.classList.add('active');
+                        }
+                    });
+                    input.querySelector('.input input').addEventListener('focus', () =>{
+                        input.classList.add('active');
+                    });
+                });  
+            });
+        </script>
     </body>
 </html>
