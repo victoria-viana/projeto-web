@@ -7,6 +7,10 @@
     color: #000;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .site-wrapper{
     width: 100%;
     height: 100%;
@@ -74,8 +78,8 @@ header, nav{
     justify-content: space-between;
 }
 
-/* start menu nav */
-.menu {
+/* start menu and profile nav */
+.menu{
     background-color: #29166f;
     width: 80%;
     height: 100vh;
@@ -84,36 +88,53 @@ header, nav{
     transform: translateX(-110%);
     transition: transform .5s ease-in-out;
     will-change: transform;
+    position: absolute;
+    left: 0;
+    top: 60px;
 }
 
-.menu a{
+.profile {
+    background-color: #29166f;
+    width: 80%;
+    height: 100vh;
+    display: block;
+    box-shadow: 0px 5px 11px 0px #000;
+    transform: translateX(110%);
+    transition: transform .5s ease-in-out;
+    will-change: transform;
+    position: absolute;
+    right: 0;
+    top: 60px;
+}
+
+.menu a, .profile a{
     text-decoration: none;
 }
 
-.menu a .link{
+.menu a .link, .profile a .link{
     display: flex;
     align-items: center;
     padding: 15px;
     border-bottom: 2px solid #fff;
 }
 
-.menu a .link .icon{
+.menu a .link .icon, .profile a .link .icon{
     width: 24px;
     height: 24px;
     margin-right: 16px;
 }
 
-.menu a .link .text{
+.menu a .link .text, .profile a .link .text{
     color: #fff;
     font-size: 18px;
 }
 
 
-.menu a .link .icon svg{
+.menu a .link .icon svg, .profile a .link .icon svg{
     fill: #fff;
 }
 
-.menu.opened {
+.menu.opened , .profile.opened {
     transform: translateX(0);
 }
 
@@ -318,18 +339,18 @@ form input[type="file"]{
         padding: 12px 40px;
     }
 
-    /* start menu nav */
-    .menu {
+    /* start menu and profile nav */
+    .menu, .profile{
         width: 400px;
     }
-    .menu a .link{
+    .menu a .link, .profile a .link{
         padding: 20px;
     }
-    .menu a .link .icon{
+    .menu a .link .icon, .profile a .link .icon{
         width: 36px;
         height: 36px;        
     }
-    .menu a .link .text{
+    .menu a .link .text, .profile a .link .text{
         font-size: 24px;
     }
     /* end menu nav */
