@@ -76,3 +76,23 @@ form .input-wrapper .helper-text{
         width: 160px !important;
     }
 }
+
+.dark form .input-wrapper .input input {
+    border: solid 1px #CFCFCF ;
+}
+.dark form .input-wrapper.active .label {
+    background-color: #1A1A1A !important;
+    color: #fff;
+}
+
+.dark form .input-wrapper .label {
+    color: #CFCFCF;
+}
+
+.dark form .input-wrapper.active .input input {
+    border: 2px solid #fff;
+}
+
+.dark form .input-wrapper.icon.active .input .icon svg{
+    fill: #fff;
+}
