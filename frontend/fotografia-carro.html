@@ -37,91 +37,43 @@
         </header>
 
         <div class="site-content">
-            <div class="title">
-                <h1>Fotografia - Carros</h1>
-            </div>
-            <nav class="actions">
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                            
-                        </div>
-                        <div class="text">Fotografia 1 - Placa Dianteira do Carro</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                
-                        </div>
-                        <div class="text">Outros</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                            
-                        </div>
-                        <div class="text">Outros</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                            
-                        </div>
-                        <div class="text">Outros</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                            
-                        </div>
-                        <div class="text">Outros</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                            
-                        </div>
-                        <div class="text">Outros</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                            
-                        </div>
-                        <div class="text">Outros</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                            
-                        </div>
-                        <div class="text">Outros</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                            
-                        </div>
-                        <div class="text">Outros</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="action">
-                        <div class="icon">
-                            
-                        </div>
-                        <div class="text">Outros</div>
-                    </div>
-                </a>
-                <button type="submit">Finalizar Fotografia</button>
+            <div class="title"><h1>Fotografia - Carros</h1></div>
+            <nav class="photos">
+                <div class="photo">
+                    <div class="photo-wrapper"></div>
+                    <div class="input"><input type="file" class="input-file"></div>
+                    <div class = "text">Foto 1</div>
+                </div> 
+                <div class="photo">
+                    <div class="photo-wrapper"></div>
+                    <div class="input"><input type="file" class="input-file"></div>
+                    <div class = "text">Foto 2</div>
+                </div> 
+                <div class="photo">
+                    <div class="photo-wrapper"></div>
+                    <div class="input"><input type="file" class="input-file"></div>
+                    <div class = "text">Foto 3</div>
+                </div> 
+                <div class="photo">
+                    <div class="photo-wrapper"></div>
+                    <div class="input"><input type="file" class="input-file"></div>
+                    <div class = "text">Foto 4</div>
+                </div> 
+                <div class="photo">
+                    <div class="photo-wrapper"></div>
+                    <div class="input"><input type="file" class="input-file"></div>
+                    
+                    <div class = "text">Foto 5</div>
+                </div> 
+                <div class="photo">
+                    <div class="photo-wrapper"></div>
+                    <div class="input"><input type="file" class="input-file"></div>
+                    <div class = "text">Foto 6</div>
+                </div> 
+
+        
+                <button type="submit">Finalizar fotografia</button>
+                             
             </nav>
         </div>
 
@@ -152,6 +104,20 @@
             </symbol>
         </defs>
     </svg>
+    <script>
+         document.addEventListener('DOMContentLoaded', function () {
+                let inputs = document.querySelectorAll('.photos .photo');
+                inputs.forEach(input => {
+                    input.addEventListener('click', () => {
+                    input.querySelector('.input input').click();
+                    });
+                    
+                });
+  
+            });
+            
+        
+    </script>
     
 </body>
 </html>

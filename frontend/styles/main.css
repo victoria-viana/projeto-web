@@ -5,10 +5,12 @@
     padding: 0;
     box-sizing: border-box;
     color: #000;
-}body{
-    width: 100%;
+}
+
+body{
     overflow-x: hidden;
 }
+
 .site-wrapper{
     width: 100%;
     height: 100%;
@@ -147,7 +149,6 @@ header, nav{
     width: 26px;
     height: 26px;
     margin-right: 19px;
-    cursor: pointer;
 }
 .site-header .app-nav .logo{
     display: flex;
@@ -164,7 +165,6 @@ header, nav{
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    cursor: pointer;
 }
 .site-header .user-nav .profile-img{
     width: 26px;
@@ -215,6 +215,84 @@ header, nav{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.site-content nav.photos{
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.site-content nav.photos .photo-wrapper{
+    width: 102px;
+    height: 78px;
+    border: 2px solid #29166f; 
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px;
+    background: url("https://via.placeholder.com/102x78");
+    padding-top: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.site-content nav.photos .text{
+    text-align: center;
+    width: 102px;
+    margin-top: 10px; 
+    font-size: 14px; 
+}
+
+.site-content nav.photos input[type="file"] {
+    display: none;
+}
+.site-content nav.photos input {
+    width: 100%;
+    height: 40px;
+}
+
+
+/*.site-content nav.photos .input-wrapper {
+    position: relative;
+    margin-bottom: 13px;
+    min-width: 100%;
+}
+
+.site-content nav.photos .input{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.site-content nav.photos .label{
+    font-size: 16px;
+    color: #888;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    transition: all .2s ease-in-out;
+}*/
+
+
+.site-content nav.photos button{
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    height: 36px;
+    background-color: #29166f;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 0;
+    outline: none;
 }
 
 nav.actions a .action .icon{
