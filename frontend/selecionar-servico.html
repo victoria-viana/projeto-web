@@ -14,13 +14,13 @@
                 <div class="site-header">
                     <div class="app-nav">
                         <div class="menu-icon">
-                           <svg width='100%' height='100%' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin' >
-                                <use href="#icon-menu"></use>
-                           </svg> 
+                            <svg width='100%' height='100%' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                <use href='#icon-menu'></use>
+                            </svg>
                         </div>
-                        <a>
+                        <a href="/">
                             <div class="logo">
-                                <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode Transportes" title="Logo Rode Transportes">
+                                <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
                             </div>
                         </a>
                     </div>
@@ -29,10 +29,69 @@
                         <div class="profile-img">
                             <img src="./assets/imgs/avatar.png" alt="Imagem de perfil" title="Imagem de perfil">
                         </div>
-
                     </div>
                 </div>
 
+                <div class="menu">
+
+                    <a href="cadastrar-usuario.html">
+                        <div class="link">
+                            <div class="icon">
+                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-user'></use>
+                                </svg>
+                            </div>
+                            <div class="text">Cadastrar Usuário</div>
+                        </div>
+                    </a>
+
+                    <a href="listar-usuarios.html">
+                        <div class="link">
+                            <div class="icon">
+                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-user'></use>
+                                </svg>
+                            </div>
+                            <div class="text">Visualizar Usuários</div>
+                        </div>
+                    </a>
+
+                    <a href="selecionar-servico.html">
+                        <div class="link">
+                            <div class="icon">
+                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-services'></use>
+                                </svg>
+                            </div>
+                            <div class="text">Cadastrar Serviço</div>
+                        </div>
+                    </a>
+
+                    <a href="listar-servicos.html">
+                        <div class="link">
+                            <div class="icon">
+                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-services'></use>
+                                </svg>
+                            </div>
+                            <div class="text">Visualizar Serviços</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="profile">
+                    <a href="/frontend/cadastrar-usuario.html">
+                        <div class="link">
+                            <div class="text">Configurações de Perfil</div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="link">
+                            <div class="text">Sair</div>
+                        </div>
+                    </a>
+                </div>
             </nav>
         </header>
 
@@ -69,6 +128,10 @@
     </div>
     <svg>
         <defs>
+            <symbol id="icon-user">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9093 32.1752C21.6311 32.1752 19.7843 34.022 19.7843 36.3002C19.7843 38.5783 21.6311 40.4252 23.9093 40.4252C26.1875 40.4252 28.0343 38.5783 28.0343 36.3002C28.0343 34.022 26.1875 32.1752 23.9093 32.1752ZM43.7085 32.1752C41.4304 32.1752 39.5836 34.022 39.5836 36.3002C39.5836 38.5783 41.4304 40.4252 43.7085 40.4252C45.9867 40.4252 47.8335 38.5783 47.8335 36.3002C47.8335 34.022 45.9867 32.1752 43.7085 32.1752ZM33.809 0C15.593 0 0.80896 14.784 0.80896 33C0.80896 51.216 15.593 66 33.809 66C52.025 66 66.809 51.216 66.809 33C66.809 14.784 52.025 0 33.809 0ZM33.8093 59.4005C19.2563 59.4005 7.40932 47.5535 7.40932 33.0005C7.40932 32.0435 7.47532 31.0865 7.57432 30.1625C15.3623 26.6975 21.5333 20.3285 24.7673 12.4415C32.4847 23.3931 46.0702 28.5741 59.1203 25.5425C59.8133 27.8855 60.2093 30.3935 60.2093 33.0005C60.2093 47.5535 48.3623 59.4005 33.8093 59.4005Z"/>                        
+            </symbol>
+            
             <symbol id="icon-menu">
                 <g clip-path="url(#clip0)">
                 <path d="M23.6073 3.26358H2.39266C1.07336 3.26358 0 4.33689 0 5.65787C0 6.97716 1.07336 8.05053 2.39266 8.05053H23.6073C24.9266 8.05053 26 6.97716 26 5.65787C26 4.33689 24.9266 3.26358 23.6073 3.26358Z" />
@@ -92,6 +155,7 @@
             </symbol>
         </defs>
     </svg>
+    <script type="text/javascript" src="js/menu.js"></script>
     
 </body>
 </html>

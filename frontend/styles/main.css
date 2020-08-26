@@ -90,7 +90,8 @@ header, nav{
     will-change: transform;
     position: absolute;
     left: 0;
-    top: 60px;
+    top: 50px;
+    z-index: 1000;
 }
 
 .profile {
@@ -104,7 +105,8 @@ header, nav{
     will-change: transform;
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 50px;
+    z-index: 1000;
 }
 
 .menu a, .profile a{
@@ -150,6 +152,7 @@ header, nav{
     width: 26px;
     height: 26px;
     margin-right: 19px;
+    cursor: pointer;
 }
 .site-header .app-nav .logo{
     display: flex;
@@ -167,6 +170,7 @@ header, nav{
     width: 26px;
     height: 26px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .site-header .user-nav .profile-img{
     width: 26px;
@@ -428,6 +432,7 @@ form input[type="file"]{
     /* start menu and profile nav */
     .menu, .profile{
         width: 400px;
+        margin-top:10px
     }
     .menu a .link, .profile a .link{
         padding: 20px;
