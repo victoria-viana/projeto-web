@@ -72,7 +72,7 @@ form .input-wrapper .helper-text{
         min-width: 328px;
     }
 
-    form button{
+    form button, nav.photos button{
         width: 160px !important;
     }
 }
