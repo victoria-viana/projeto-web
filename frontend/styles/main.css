@@ -548,6 +548,13 @@ form input[type="file"]{
 
 /* Dark Mode */
 
+/*
+Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da outra maneira
+.dark *{
+    color: #CFCFCF;
+}
+*/
+
 .dark{
     background-color: #1A1A1A;
 }
@@ -608,86 +615,6 @@ form input[type="file"]{
 
 .profile .icon svg use:nth-child(1){
     display: block;
-}
-/* alto contraste */
-
-.contrast *{
-    background-color: #000000;
-    color: #FFFFFF;
-}
-
-.contrast{
-    background-color: #000000;
-}
-
-.contrast .site-wrapper{
-    background-color: #000000; /*não importante*/
-}
-.contrast .site-wrapper .site-header{
-    border-bottom: solid 1px #FFFF00;
-}
-.contrast .site-wrapper .site-header .app-nav{
-    background-color: #000000;
-}
-.contrast .site-wrapper .site-header .app-nav .logo img{
-    background-color: #000000;
-}
-.contrast .site-header .user-nav .profile-img img{
-    background-color: #000000;
-}
-.contrast .site-header .app-nav .menu-icon svg{
-    fill: #CFCFCF;
-}
-
-.contrast .form-wrapper form button{
-    background-color: #000000;
-    border: solid 1px #FFFF00;
-}
-.contrast .site-content nav.photos button{
-    background-color: #000000;
-    border: solid 1px #FFFF00;
-}
-.contrast form .profile-file-input{
-    background-color: #1F1F1F;
-    border: solid 1px #CFCFCF;
-    
-}
-
-.contrast form .profile-file-input .icon-pencil{
-    fill: #CFCFCF;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.contrast form .profile-file-input .icon-pencil svg {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.contrast .site-wrapper .site-content nav.actions a .action{
-    background-color: #000000;
-    border: solid 1px #FFFF00;
-}
-.contrast .site-wrapper .site-content nav.actions a .action .text{
-    background-color: #000000;
-}
-.contrast .site-wrapper .site-content nav.actions a .action .icon svg{ /*ver linha 180 que força o fundo original*/
-    background-color: #000000;
-}
-
-.contrast .form-wrapper .profile-file-input{
-    background-color: #000000;
-    border: solid 1px #FFFFFF;
-}
-.contrast .form-wrapper{
-    color: #FFFFFF;
-}
-.contrast .form-wrapper .label{
-    color: #FFFFFF;
-}
-.contrast .form-wrapper .input{
-    color: #FFFFFF;
-}
-.contrast .form-wrapper .helper-text{
-    color: #FFFFFF;
 }
 
 /* ativar alto contrast */
