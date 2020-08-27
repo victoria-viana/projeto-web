@@ -77,22 +77,27 @@ form .input-wrapper .helper-text{
     }
 }
 
-.dark form .input-wrapper .input input {
+.dark .input-wrapper .input input {
     border: solid 1px #CFCFCF ;
 }
-.dark form .input-wrapper.active .label {
-    background-color: #1A1A1A !important;
+.dark .input-wrapper.active .label {
+    background-color: #1f1f1f;
     color: #fff;
 }
 
-.dark form .input-wrapper .label {
+.dark .input-wrapper .input input{
+    background-color: #1f1f1f;
+}
+
+
+.dark .input-wrapper .label {
     color: #CFCFCF;
 }
 
-.dark form .input-wrapper.active .input input {
+.dark .input-wrapper.active .input input {
     border: 2px solid #fff;
 }
 
-.dark form .input-wrapper.icon.active .input .icon svg{
+.dark .input-wrapper.icon.active .input .icon svg{
     fill: #fff;
 }

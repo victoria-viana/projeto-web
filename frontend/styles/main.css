@@ -302,6 +302,22 @@ header, nav{
     outline: none;
 }
 
+nav.actions a .action .icon svg use{
+    display: none;
+}
+
+nav.actions a .action.dark .icon svg use:nth-child(1){
+    display: none;
+}
+
+nav.actions a .action.dark .icon svg use:nth-child(2){
+    display: block;
+}
+
+nav.actions a .action .icon svg use:nth-child(1){
+    display: block;
+}
+
 nav.actions a .action .icon{
     width: 66px;
     height: 66px;   
@@ -476,9 +492,15 @@ form input[type="file"]{
         justify-content: flex-start;  
     }
     
-    .site-content nav.actions a .action{
+    .site-content nav.actions a {
         width: 273px;
         height: 162px;
+        display: block;
+        margin: 20px;
+    }
+    .site-content nav.actions a .action{
+        width: 100%;
+        height: 100%;
         padding-top: 25px;
     }
     nav.actions a .action .text{
@@ -526,10 +548,7 @@ form input[type="file"]{
 
 /* Dark Mode */
 
-.dark *{
-    background-color: #1A1A1A;
-    color: #CFCFCF;
-}
+
 
 .dark{
     background-color: #1A1A1A;
@@ -549,10 +568,22 @@ form input[type="file"]{
     transition: 0.5s;
 }
 
+.dark .site-content .title h1{
+    color: #cfcfcf;
+}
+
+.dark .menu, .dark .profile{
+    background-color: #000;
+}
+
 .dark form .profile-file-input{
     background-color: #1F1F1F;
     border: solid 1px #CFCFCF ;
     
+}
+
+.dark .site-content nav.photos .text{
+    color: #cfcfcf;
 }
 
 .dark form .profile-file-input .icon-pencil{
@@ -614,3 +645,4 @@ form input[type="file"]{
 .toggle-container label:active:after {
 	width: 45px;
 }
+
