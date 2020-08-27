@@ -81,14 +81,14 @@ form .input-wrapper .helper-text{
     border: solid 1px #CFCFCF ;
 }
 .dark .input-wrapper.active .label {
-    background-color: #1f1f1f;
+    background-color: #1A1A1A;
     color: #fff;
+    
 }
 
 .dark .input-wrapper .input input{
     background-color: #1f1f1f;
 }
-
 
 .dark .input-wrapper .label {
     color: #CFCFCF;
@@ -96,6 +96,7 @@ form .input-wrapper .helper-text{
 
 .dark .input-wrapper.active .input input {
     border: 2px solid #fff;
+    
 }
 
 .dark .input-wrapper.icon.active .input .icon svg{

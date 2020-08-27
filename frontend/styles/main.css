@@ -146,7 +146,7 @@ header, nav{
     display: flex;
     align-items: center;
     width: 116px;
-    background-color: #29166f; /* Necessario para Dark Mode */
+    
 }
 .site-header .app-nav .menu-icon{
     width: 26px;
@@ -161,7 +161,7 @@ header, nav{
 }
 .site-header .app-nav .logo img{
     height: 100%;
-    background-color: #29166f; /* Necessario para Dark Mode */
+    
 }
 .site-header .app-nav .menu-icon svg{
     fill: #fff;
@@ -179,7 +179,7 @@ header, nav{
 }
 .site-header .user-nav .profile-img img{
     height: 100%;
-    background-color: #29166f; /* Necessario para Dark Mode */
+    
 }
 
 .site-content{
@@ -309,7 +309,7 @@ nav.actions a .action .icon{
 
 nav.actions a .action .icon svg{
     fill: #fff;  
-    background-color: #29166f; /* Necessario para Dark Mode */ 
+    
 }
 
 nav.actions a .action .text{
@@ -318,7 +318,7 @@ nav.actions a .action .text{
     margin-top: 11px;
     font-size: 18px;
     max-width: 120px;
-    background-color: #29166f; /* Necessario para Dark Mode */
+    
 }
 
 form .profile-file-input{
@@ -372,12 +372,12 @@ form input[type="file"]{
 .results-wrapper .result .name{
     font-size: 16px;
     color: #fff;
-    background-color: #29166f; /* Necessario para Dark Mode */
+    
 }
 
 .results-wrapper .result .actions{
     display: flex;
-    background-color: #29166f; /* Necessario para Dark Mode */
+    
 }
 
 .results-wrapper .result .actions div{
@@ -396,7 +396,7 @@ form input[type="file"]{
 
 .results-wrapper .result .actions div svg{
     fill: #fff;
-    background-color: #29166f; /* Necessario para Dark Mode */
+    
 }
 
 .form-box{
@@ -536,13 +536,12 @@ form input[type="file"]{
     background-color: #1A1A1A;
 }
 
+
 .dark .site-header{
     border-bottom: solid 1px #2F2F2F;
 }
 
-.dark .site-header .app-nav .menu-icon svg{
-    fill: #CFCFCF;
-}
+
 
 .dark .form-wrapper form button {
     color: #CFCFCF;
@@ -550,12 +549,14 @@ form input[type="file"]{
     transition: 0.5s;
 }
 
+
 .dark .site-content .title h1{
-    color: #cfcfcf;
+    color: #CFCFCF;
 }
 
+
 .dark .menu, .dark .profile{
-    background-color: #000;
+    background-color: #1A1A1A;
 }
 
 .dark form .profile-file-input{
@@ -565,16 +566,12 @@ form input[type="file"]{
 }
 
 .dark .site-content nav.photos .text{
-    color: #cfcfcf;
+    color: #CFCFCF ;
 }
 
 .dark form .profile-file-input .icon-pencil{
     fill: #CFCFCF;
-    background-color: rgba(0, 0, 0, 0) !important;
-}
-
-.dark form .profile-file-input .icon-pencil svg {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .dark .site-content nav.actions a .action{
