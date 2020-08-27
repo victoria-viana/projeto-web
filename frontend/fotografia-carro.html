@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotografia - Rode Transportes</title>
+    <title>Fotografia Carros - Rode Transportes</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css">
     <link href="styles/forms.css" rel="stylesheet" type="text/css">
 </head>
@@ -74,40 +74,45 @@
         <div class="site-content">
             <div class="title"><h1>Fotografia - Carros</h1></div>
             <nav class="photos">
-                <div class="photo">
-                    <div class="photo-wrapper"></div>
-                    <div class="input"><input type="file" class="input-file"></div>
-                    <div class = "text">Foto 1</div>
-                </div> 
-                <div class="photo">
-                    <div class="photo-wrapper"></div>
-                    <div class="input"><input type="file" class="input-file"></div>
-                    <div class = "text">Foto 2</div>
-                </div> 
-                <div class="photo">
-                    <div class="photo-wrapper"></div>
-                    <div class="input"><input type="file" class="input-file"></div>
-                    <div class = "text">Foto 3</div>
-                </div> 
-                <div class="photo">
-                    <div class="photo-wrapper"></div>
-                    <div class="input"><input type="file" class="input-file"></div>
-                    <div class = "text">Foto 4</div>
-                </div> 
-                <div class="photo">
-                    <div class="photo-wrapper"></div>
-                    <div class="input"><input type="file" class="input-file"></div>
-                    
-                    <div class = "text">Foto 5</div>
-                </div> 
-                <div class="photo">
-                    <div class="photo-wrapper"></div>
-                    <div class="input"><input type="file" class="input-file"></div>
-                    <div class = "text">Foto 6</div>
-                </div> 
 
-        
-                <button type="submit">Finalizar fotografia</button>
+                <div class="photos-wrapper">
+                    <div class="photo">
+                        <div class="photo-wrapper"></div>
+                        <div class="input"><input type="file" class="input-file"></div>
+                        <div class = "text">Foto 1</div>
+                    </div> 
+                    <div class="photo">
+                        <div class="photo-wrapper"></div>
+                        <div class="input"><input type="file" class="input-file"></div>
+                        <div class = "text">Foto 2</div>
+                    </div> 
+                    <div class="photo">
+                        <div class="photo-wrapper"></div>
+                        <div class="input"><input type="file" class="input-file"></div>
+                        <div class = "text">Foto 3</div>
+                    </div> 
+                    <div class="photo">
+                        <div class="photo-wrapper"></div>
+                        <div class="input"><input type="file" class="input-file"></div>
+                        <div class = "text">Foto 4</div>
+                    </div> 
+                    <div class="photo">
+                        <div class="photo-wrapper"></div>
+                        <div class="input"><input type="file" class="input-file"></div>
+                        
+                        <div class = "text">Foto 5</div>
+                    </div> 
+                    <div class="photo">
+                        <div class="photo-wrapper"></div>
+                        <div class="input"><input type="file" class="input-file"></div>
+                        <div class = "text">Foto 6</div>
+                    </div> 
+                </div>
+                
+                <div class="photos-button">
+                    <textarea  placeholder="Observações"></textarea>
+                    <button type="submit">Finalizar fotografia</button>
+                </div>
                              
             </nav>
         </div>
@@ -137,24 +142,25 @@
                     <path d="M56.9611 55.3423L55.4049 56.8986L44.4016 45.8953L45.9574 44.3391L56.9611 55.3423Z" />  
                     
             </symbol>
+            
         </defs>
     </svg>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/darkmode.js"></script>
     <script>
-         document.addEventListener('DOMContentLoaded', function () {
-                let inputs = document.querySelectorAll('.photos .photo');
-                inputs.forEach(input => {
-                    input.addEventListener('click', () => {
-                    input.querySelector('.input input').click();
-                    });
-                    
-                });
-  
-            });
-            
-        
-    </script>
+        document.addEventListener('DOMContentLoaded', function () {
+               let inputs = document.querySelectorAll('.photos .photo');
+               inputs.forEach(input => {
+                   input.addEventListener('click', () => {
+                   input.querySelector('.input input').click();
+                   });
+                   
+               });
+ 
+           });
+           
+       
+   </script>
     
 </body>
 </html>
