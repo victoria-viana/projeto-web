@@ -1,26 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const darkMode = localStorage.getItem("darkMode");
-    const darkModeToggle = document.querySelector("input[name=theme]");
-    const toggleDark = document.querySelector('.toggle-container label');
+    const darkMode = localStorage.getItem('darkMode');
+    const toggleDark = document.querySelector('#pageMode');
 
 
     if(darkMode === 'true') {
         document.querySelector('body').classList.add('dark');
-        darkModeToggle.checked = true;
+        document.querySelector('div.profile div#pageMode div.text').innerHTML= 'Modo: Dark';
     }else{
         document.querySelector('body').classList.remove('dark');
-        darkModeToggle.checked = false;
+        document.querySelector('div.profile div#pageMode div.text').innerHTML= 'Modo: Light';
     }
 
     toggleDark.addEventListener('click', () => {
-        darkModeToggle.click();
-        if(darkModeToggle.checked){
-            document.querySelector('body').classList.add('dark');
-            localStorage.setItem('darkMode', 'true');
-        }else{
+        if(document.querySelector('body').classList.contains('dark')){
             document.querySelector('body').classList.remove('dark');
+            document.querySelector('div.profile div#pageMode div.text').innerHTML= 'Modo: Light';
             localStorage.setItem('darkMode', 'false');
+        }else{
+            document.querySelector('body').classList.add('dark');
+            document.querySelector('div.profile div#pageMode div.text').innerHTML= 'Modo: Dark';
+            localStorage.setItem('darkMode', 'true');
         }
     });
 });

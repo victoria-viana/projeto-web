@@ -302,22 +302,6 @@ header, nav{
     outline: none;
 }
 
-nav.actions a .action .icon svg use{
-    display: none;
-}
-
-nav.actions a .action.dark .icon svg use:nth-child(1){
-    display: none;
-}
-
-nav.actions a .action.dark .icon svg use:nth-child(2){
-    display: block;
-}
-
-nav.actions a .action .icon svg use:nth-child(1){
-    display: block;
-}
-
 nav.actions a .action .icon{
     width: 66px;
     height: 66px;   
@@ -548,8 +532,6 @@ form input[type="file"]{
 
 /* Dark Mode */
 
-
-
 .dark{
     background-color: #1A1A1A;
 }
@@ -599,50 +581,18 @@ form input[type="file"]{
     border: solid 1px #2F2F2F ;
 }
 
-/* button dark mode */
-.toggle-container {
-    margin-left: 10px;
+.profile .icon svg use{
+    display: none;
 }
 
-.toggle-container input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
+.dark .profile .icon svg use:nth-child(1){
+    display: none;
 }
 
-.toggle-container label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 52px;
-	height: 27px;
-	background: #1A1A1A;
-	float: right;
-	border-radius: 100px;
-	position: relative;
+.dark .profile .icon svg use:nth-child(2){
+    display: block;
 }
 
-.toggle-container label:after {
-	content: '';
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 20px;
-	height: 20px;
-	background: #fff;
-	border-radius: 90px;
-	transition: 0.3s;
+.profile .icon svg use:nth-child(1){
+    display: block;
 }
-
-.toggle-container input:checked + label {
-	background: #FFF500;
-}
-
-.toggle-container input:checked + label:after {
-	left: calc(100% - 5px);
-	transform: translateX(-100%);
-}
-
-.toggle-container label:active:after {
-	width: 45px;
-}
-
