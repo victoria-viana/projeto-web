@@ -601,6 +601,17 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
     border: solid 1px #2F2F2F ;
 }
 
+.dark .site-content nav.photos .photo-wrapper {
+    background: url(https://via.placeholder.com/102x78/2C2C2C);
+    border: solid 1px #2F2F2F ;
+}
+
+.dark .site-content nav.photos .photos-button textarea{
+    background-color: #2C2C2C;
+    color: #CFCFCF;
+    border: solid 1px #2F2F2F ;
+}
+
 .profile .icon svg use{
     display: none;
 }
