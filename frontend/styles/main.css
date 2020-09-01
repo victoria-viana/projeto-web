@@ -71,7 +71,7 @@ header, nav{
 .site-header{
     width: 100%;
     height: 50px;
-    background-color: #29166f !important;
+    background-color: #29166f;
     padding: 12px 16px;
     display: flex;
     align-items: center;
@@ -612,19 +612,19 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
     border: solid 1px #2F2F2F ;
 }
 
-.profile .icon svg use{
+.profile div#pageMode .icon svg use{
     display: none;
 }
 
-.dark .profile .icon svg use:nth-child(1){
+.dark .profile div#pageMode .icon svg use:nth-child(1){
     display: none;
 }
 
-.dark .profile .icon svg use:nth-child(2){
+.dark .profile div#pageMode .icon svg use:nth-child(2){
     display: block;
 }
 
-.profile .icon svg use:nth-child(1){
+.profile div#pageMode .icon svg use:nth-child(1){
     display: block;
 }
 
@@ -713,49 +713,18 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
     border: solid 1px #FFF000;
 }
 
-/* ativar alto contrast */
-.toggle-contrast {
-    margin-left: 10px;
+.profile div#pageContrast .icon svg use{
+    display: none;
 }
 
-.toggle-contrast input[type=checkbox]{
-    height: 0;
-    width: 0;
-    visibility: hidden;
+.contrast  .profile div#pageContrast .icon svg use:nth-child(1){
+    display: none;
 }
 
-.toggle-contrast label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 52px;
-    height: 27px;
-    background: #1A1A1A;
-    float: right;
-    border-radius: 100px;
-    position: relative;
+.contrast  .profile div#pageContrast .icon svg use:nth-child(2){
+    display: block;
 }
 
-.toggle-contrast label:after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border-radius: 90px;
-    transition: 0.3s;
-}
-
-.toggle-contrast input:checked + label {
-    background: #FFF500;
-}
-
-.toggle-contrast input:checked + label:after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
-}
-
-.toggle-contrast label:active:after {
-    width: 45px;
+.profile div#pageContrast .icon svg use:nth-child(1){
+    display: block;
 }

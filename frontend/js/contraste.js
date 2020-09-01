@@ -1,26 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const altoContraste = localStorage.getItem("altoContraste");
-    const altoContrasteToggle = document.querySelector("input[name=contrast]");
-    const toggleContraste = document.querySelector('.toggle-contrast label');
+    const ContrastMode = localStorage.getItem("ContrastMode");
+    const toggleContrast = document.querySelector('#pageContrast');
 
 
-    if(altoContraste === 'true') {
+    if(ContrastMode === 'true') {
         document.querySelector('body').classList.add('contrast');
-        altoContrasteToggle.checked = true;
+        document.querySelector('div.profile div#pageContrast div.text').innerHTML= 'Modo: Contrast';
     }else{
         document.querySelector('body').classList.remove('contrast');
-        altoContrasteToggle.checked = false;
+        document.querySelector('div.profile div#pageContrast div.text').innerHTML= 'Modo: Normal';
     }
 
-    toggleContraste.addEventListener('click', () => {
-        altoContrasteToggle.click();
-        if(altoContrasteToggle.checked){
-            document.querySelector('body').classList.add('contrast');
-            localStorage.setItem('altoContraste', 'true');
-        }else{
+    toggleContrast.addEventListener('click', () => {
+        if(document.querySelector('body').classList.contains('contrast')){
             document.querySelector('body').classList.remove('contrast');
-            localStorage.setItem('altoContraste', 'false');
+            document.querySelector('div.profile div#pageContrast div.text').innerHTML= 'Modo: Normal';
+            localStorage.setItem('ContrastMode', 'false');
+        }else{
+            document.querySelector('body').classList.add('contrast');
+            document.querySelector('div.profile div#pageContrast div.text').innerHTML= 'Modo: Contrast';
+            localStorage.setItem('ContrastMode', 'true');
         }
     });
 });
