@@ -12,9 +12,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
+
 app.use(routes);
 
-app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
+app.get('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 
 try {
     mongoose.connect(`mongodb+srv://dbAdmin:${process.env.DBPASSWD}@cluster-rode.anech.mongodb.net/rodetransportesvistoria?retryWrites=true&w=majority`, {
@@ -22,9 +23,9 @@ try {
         useUnifiedTopology: true,
     });
 
-    app.listen(port, function() {
+    app.listen(port, () => {
         console.log("Server started...");
     });
 } catch (error) {
-    
+    console.log('Não foi possível se conectar com o banco de dados');
 }
