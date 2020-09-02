@@ -640,7 +640,7 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
 }
 
 .contrast .site-wrapper{
-    background-color: #000000; /*não importante*/
+    background-color: #000000;
 }
 .contrast .site-wrapper .site-header{
     border-bottom: solid 1px #FFF000;
@@ -688,7 +688,7 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
 .contrast .site-wrapper .site-content nav.actions a .action .text{
     background-color: #000000;
 }
-.contrast .site-wrapper .site-content nav.actions a .action .icon svg{ /*ver linha 180 que força o fundo original*/
+.contrast .site-wrapper .site-content nav.actions a .action .icon svg{
     background-color: #000000;
 }
 
@@ -711,6 +711,31 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
 .contrast .results-wrapper .result{
     background-color: #000000;
     border: solid 1px #FFF000;
+}
+
+.contrast .site-content nav.photos .text{
+    color: #CFCFCF;
+}
+
+.contrast .site-content nav.actions a .action{
+    border: solid 1px #FFF000;
+}
+
+.contrast .site-content nav.photos .photo-wrapper {
+    background: url(https://via.placeholder.com/102x78/2C2C2C);
+    border: solid 1px #FFF000;
+}
+
+.contrast .site-content nav.photos .photos-button textarea{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.contrast .menu a .link .icon, .profile a .link .icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    color: #FFFFFF;
 }
 
 .profile div#pageContrast .icon svg use{
