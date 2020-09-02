@@ -686,7 +686,7 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
     fill: #CFCFCF;
 }
 
-.contrast .form-wrapper form button{
+.contrast .form-wrapper form button, .contrast  .btn{
     background-color: #000000;
     border: solid 1px #FFF000;
 }
