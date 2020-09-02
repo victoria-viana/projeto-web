@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visualizar Serviço - Outros</title>
+        <title>Editar Serviço - Detran</title>
         <link href="styles/main.css" rel="stylesheet" type="text/css">
         <link href="styles/forms.css" rel="stylesheet" type="text/css">
     </head>
@@ -19,7 +19,7 @@
                                     <use href='#icon-menu'></use>
                                 </svg>
                             </div>
-                            <a href="home.html">
+                            <a href="home-gerente.html">
                                 <div class="logo">
                                     <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
                                 </div>
@@ -34,30 +34,7 @@
                     </div>
 
                     <div class="menu">
-
-                        <a href="cadastrar-usuario.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-user'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Cadastrar Usuário</div>
-                            </div>
-                        </a>
-
-                        <a href="listar-usuarios.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-user'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Visualizar Usuários</div>
-                            </div>
-                        </a>
-
-                        <a href="selecionar-servico.html">
+                        <a href="selecionar-servico-gerente.html">
                             <div class="link">
                                 <div class="icon">
                                     <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
@@ -68,7 +45,7 @@
                             </div>
                         </a>
 
-                        <a href="listar-servicos.html">
+                        <a href="listar-servicos-gerente.html">
                             <div class="link">
                                 <div class="icon">
                                     <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
@@ -81,7 +58,7 @@
                     </div>
 
                     <div class="profile">
-                        <a href="/frontend/cadastrar-usuario.html">
+                        <a href="#">
                             <div class="link">
                                 <div class="text">Configurações de Perfil</div>
                             </div>
@@ -122,7 +99,7 @@
 
             <div class="site-content">
                 <div class="title">
-                    <h1>Serviço nº 0001 </h1>
+                    <h1>Editar Serviço nº 0001 - Detran</h1>
                 </div>
 
                 <div class="form-wrapper new">
@@ -137,51 +114,22 @@
                         </div>
 
                         <div class="input-wrapper">
-                            <div class="label">Nome e Telefone do Responsável</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Contatos do Responsável</div>
-                        </div>
-
-                        <div class="input-wrapper">
                             <div class="label">Endereço Coleta</div>
                             <div class="input">
                                 <input type="text">
                             </div>
                             <div class="helper-text">Endereço Completo</div>
                         </div>
-
+                        
                         <div class="input-wrapper">
-                            <div class="label">Endereço Entrega</div>
+                            <div class="label">Nome e Telefone do Responsável</div>
                             <div class="input">
                                 <input type="text">
                             </div>
-                            <div class="helper-text">Endereço Completo</div>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="label">Modelo</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Modelo do Veículo</div>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="label">Placa</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Placa do Veículo</div>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="label">Cor</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Cor do Veículo</div>
+                            <div class="helper-text">Contatos do Responsável</div>
                         </div>
                         
-                        <button type="submit">INICIAR FOTOGRAFIA</button>
+                        <button type="submit">EDITAR</button>
                     </form>
                 </div>
             </div>
@@ -231,7 +179,7 @@
                     <path d="M6.38095 17.5873C6.09524 17.2699 5.55555 17.2699 5.23809 17.5873L3.49206 19.3334C3.1746 19.6508 3.1746 20.1588 3.49206 20.4762C3.80952 20.7937 4.31746 20.7937 4.63492 20.4762L6.38095 18.7302C6.69841 18.4127 6.69841 17.9048 6.38095 17.5873Z" />
                     <path d="M6.38095 5.26986L4.63492 3.52383C4.31746 3.20637 3.80952 3.20637 3.49206 3.52383C3.1746 3.84129 3.1746 4.34923 3.49206 4.66669L5.23809 6.41272C5.55555 6.73018 6.06349 6.73018 6.38095 6.41272C6.69841 6.09526 6.69841 5.58732 6.38095 5.26986Z" />
                 </symbol>
-
+                
                 <symbol id="icon-contrast-out">
                     <path d="M25.9694 0H0.0305176V26L25.9694 0ZM3.24792 7.4711V5.8351H5.81102V3.272H7.44702V5.8351H9.95552V7.4711H7.44702V9.9796H5.81102V7.4711H3.24792Z"/>
                     <path d="M16.7981 21.6068H23.5057V19.9708H16.7981V21.6068Z"/>

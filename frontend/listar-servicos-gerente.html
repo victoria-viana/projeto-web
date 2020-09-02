@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visualizar Serviço - Outros</title>
+        <title>Listar Serviços - Rode Transportes</title>
         <link href="styles/main.css" rel="stylesheet" type="text/css">
         <link href="styles/forms.css" rel="stylesheet" type="text/css">
     </head>
@@ -19,7 +19,7 @@
                                     <use href='#icon-menu'></use>
                                 </svg>
                             </div>
-                            <a href="home.html">
+                            <a href="home-gerente.html">
                                 <div class="logo">
                                     <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
                                 </div>
@@ -34,30 +34,7 @@
                     </div>
 
                     <div class="menu">
-
-                        <a href="cadastrar-usuario.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-user'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Cadastrar Usuário</div>
-                            </div>
-                        </a>
-
-                        <a href="listar-usuarios.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-user'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Visualizar Usuários</div>
-                            </div>
-                        </a>
-
-                        <a href="selecionar-servico.html">
+                        <a href="selecionar-servico-gerente.html">
                             <div class="link">
                                 <div class="icon">
                                     <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
@@ -68,7 +45,7 @@
                             </div>
                         </a>
 
-                        <a href="listar-servicos.html">
+                        <a href="listar-servicos-gerente.html">
                             <div class="link">
                                 <div class="icon">
                                     <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
@@ -81,7 +58,7 @@
                     </div>
 
                     <div class="profile">
-                        <a href="/frontend/cadastrar-usuario.html">
+                        <a href="#">
                             <div class="link">
                                 <div class="text">Configurações de Perfil</div>
                             </div>
@@ -109,7 +86,7 @@
                                 </div>
                                 <div class="text">Modo: Normal</div>
                             </div>
-                        </a>
+                        </a>                        
 
                         <a href="#">
                             <div class="link">
@@ -122,68 +99,83 @@
 
             <div class="site-content">
                 <div class="title">
-                    <h1>Serviço nº 0001 </h1>
+                    <h1>Visualizar Serviços</h1>
                 </div>
 
                 <div class="form-wrapper new">
                     <form>
-                      
-                        <div class="input-wrapper">
-                            <div class="label">Cliente</div>
+                        <div class="input-wrapper icon search">
+                            <div class="label">Buscar Serviço</div>
                             <div class="input">
                                 <input type="text">
+                                    <div class="icon">
+                                        <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                            <use href='#icon-search'></use>
+                                        </svg>
+                                    </div>
                             </div>
-                            <div class="helper-text">Nome Cliente</div>
                         </div>
 
-                        <div class="input-wrapper">
-                            <div class="label">Nome e Telefone do Responsável</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Contatos do Responsável</div>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <div class="label">Endereço Coleta</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Endereço Completo</div>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <div class="label">Endereço Entrega</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Endereço Completo</div>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="label">Modelo</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Modelo do Veículo</div>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="label">Placa</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Placa do Veículo</div>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="label">Cor</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">Cor do Veículo</div>
-                        </div>
-                        
-                        <button type="submit">INICIAR FOTOGRAFIA</button>
                     </form>
                 </div>
+
+                <div class="results-wrapper">
+                    <div class="result">
+                        <div class="name">Serviço 1 - Outros</div>
+                        <div class="actions">
+                            <a href="editar-servico-outros-gerente.html">
+                                <div class="edit">
+                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-edit-box'></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            
+                            <div class="delete">
+                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-trash'></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <div class="name">Serviço 2 - Detran</div>
+                        <div class="actions">
+                            <a href="editar-servico-detran-gerente.html">
+                                <div class="edit">
+                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-edit-box'></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            
+                            <div class="delete">
+                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-trash'></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <div class="name">Serviço 3 - Outros</div>
+                        <div class="actions">
+                            <a href="editar-servico-outros-gerente.html">
+                                <div class="edit">
+                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-edit-box'></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            
+                            <div class="delete">
+                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-trash'></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
         <svg>
@@ -214,6 +206,19 @@
                 </symbol>
                 <symbol id="icon-edit">
                     <path d="M17.896 0.961173C17.2806 0.345645 16.4458 -8.68844e-05 15.5754 1.35607e-05C14.7045 -0.00249757 13.8689 0.343837 13.2552 0.961725L1.96498 12.251C1.87131 12.3453 1.80065 12.46 1.75841 12.5861L0.0441642 17.7289C-0.105449 18.178 0.137377 18.6634 0.586518 18.8129C0.673654 18.842 0.764909 18.8568 0.856716 18.8569C0.948724 18.8567 1.04018 18.842 1.12757 18.8132L6.27036 17.0989C6.39667 17.0567 6.51143 16.9857 6.6055 16.8915L17.8956 5.60139C19.1771 4.32011 19.1772 2.2426 17.896 0.961173Z"/>                        
+                </symbol>
+                <symbol id="icon-search">
+                    <path d="M16.607 14.2416C19.488 10.1734 18.5245 4.54025 14.4563 1.65999C10.3882 -1.22026 4.755 -0.257423 1.87475 3.81141C-1.00551 7.87955 -0.0426705 13.512 4.02616 16.3923C6.92981 18.448 10.7688 18.6063 13.8314 16.7977L20.4859 23.4123C21.2044 24.1686 22.3999 24.1989 23.1563 23.4804C23.9126 22.7626 23.9429 21.5671 23.2251 20.8107C23.2024 20.7867 23.1804 20.7646 23.1563 20.7419L16.607 14.2416ZM9.23539 14.8582C6.02066 14.8589 3.41432 12.2546 3.41226 9.03991C3.41157 5.82518 6.01584 3.21884 9.23126 3.21746C12.4419 3.21609 15.0468 5.81623 15.053 9.02683C15.0585 12.2423 12.4556 14.8527 9.23952 14.8582C9.23814 14.8582 9.23746 14.8582 9.23539 14.8582Z"/>                       
+                </symbol>
+                <symbol id="icon-edit-box">
+                    <path d="M19.714 12.0001C19.2406 12.0001 18.8569 12.3838 18.8569 12.8572V21.4285C18.8569 21.9019 18.4731 22.2856 17.9997 22.2856H2.57139C2.098 22.2856 1.71425 21.9019 1.71425 21.4285V4.28587C1.71425 3.81247 2.098 3.42872 2.57139 3.42872H12.857C13.3304 3.42872 13.7141 3.04497 13.7141 2.57158C13.7141 2.09818 13.3304 1.71448 12.857 1.71448H2.57139C1.15125 1.71448 0 2.86573 0 4.28587V21.4285C0 22.8486 1.15125 23.9999 2.57139 23.9999H17.9998C19.4199 23.9999 20.5712 22.8486 20.5712 21.4285V12.8572C20.5712 12.3838 20.1874 12.0001 19.714 12.0001Z"/>
+                    <path d="M23.0391 0.961356C22.4236 0.345828 21.5889 9.6221e-05 20.7185 0.000196666C19.8476 -0.00231446 19.012 0.34402 18.3982 0.961908L7.10804 12.2511C7.01438 12.3455 6.94372 12.4602 6.90148 12.5863L5.18723 17.7291C5.03762 18.1782 5.28044 18.6635 5.72958 18.8131C5.81672 18.8421 5.90798 18.857 5.99978 18.8571C6.09179 18.8569 6.18325 18.8421 6.27063 18.8134L11.4134 17.0991C11.5397 17.0569 11.6545 16.9859 11.7486 16.8917L23.0387 5.60157C24.3201 4.32029 24.3203 2.24278 23.0391 0.961356Z"/>                        
+                </symbol>
+                <symbol id="icon-trash">
+                    <path d="M21.7442 5.36444L21.2143 3.776C21.0125 3.17102 20.4483 2.76453 19.8108 2.76453H15.3571V1.31451C15.3571 0.589783 14.7678 0 14.0433 0H9.96481C9.24044 0 8.65103 0.589783 8.65103 1.31451V2.76453H4.19754C3.55978 2.76453 2.99563 3.17102 2.79385 3.776L2.26394 5.36444C2.14328 5.72607 2.20443 6.12653 2.42727 6.43579C2.65011 6.74506 3.01065 6.92981 3.39187 6.92981H3.94577L5.16488 22.0051C5.25552 23.1237 6.20474 24 7.32626 24H16.9292C18.0506 24 19 23.1237 19.0904 22.0049L20.3095 6.92981H20.6162C20.9975 6.92981 21.358 6.74506 21.5808 6.43597C21.8037 6.12671 21.8648 5.72607 21.7442 5.36444ZM10.0573 1.40625H13.9508V2.76453H10.0573V1.40625ZM17.6887 21.8915C17.6569 22.2854 17.3233 22.5938 16.9292 22.5938H7.32626C6.93222 22.5938 6.5986 22.2854 6.56674 21.8915L5.35659 6.92981H18.8987L17.6887 21.8915ZM3.69345 5.52356L4.12796 4.22095C4.13784 4.19092 4.16586 4.17078 4.19754 4.17078H19.8108C19.8424 4.17078 19.8703 4.19092 19.8803 4.22095L20.3148 5.52356H3.69345Z" />
+                    <path d="M15.4458 21.8417C15.4583 21.8424 15.4706 21.8426 15.483 21.8426C15.8545 21.8426 16.1651 21.5515 16.1845 21.1761L16.8448 8.5012C16.8649 8.11338 16.5668 7.78251 16.1792 7.76237C15.7905 7.74168 15.4607 8.04014 15.4404 8.42795L14.7803 21.1029C14.7601 21.4907 15.058 21.8216 15.4458 21.8417Z" />
+                    <path d="M7.85457 21.1778C7.87508 21.5526 8.18526 21.8426 8.55605 21.8426C8.56886 21.8426 8.58205 21.8423 8.59505 21.8415C8.98268 21.8205 9.27986 21.489 9.25881 21.1012L8.56722 8.4263C8.54616 8.03849 8.21474 7.74131 7.82692 7.76255C7.43929 7.7836 7.14211 8.11502 7.16316 8.50284L7.85457 21.1778Z" />
+                    <path d="M12.0117 21.8427C12.4001 21.8427 12.7148 21.5279 12.7148 21.1395V8.4646C12.7148 8.07623 12.4001 7.76147 12.0117 7.76147C11.6234 7.76147 11.3086 8.07623 11.3086 8.4646V21.1395C11.3086 21.5279 11.6234 21.8427 12.0117 21.8427Z" />                        
                 </symbol>
 
                 <symbol id="icon-moon">
@@ -247,7 +252,6 @@
         <script type="text/javascript" src="js/darkmode.js"></script>
         <script type="text/javascript" src="js/contraste.js"></script>
         <script>
-    
             document.addEventListener('DOMContentLoaded', function () {
                 let inputs = document.querySelectorAll('.input-wrapper');
             
