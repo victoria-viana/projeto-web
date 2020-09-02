@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Iniciar Serviço - Detran</title>
+        <title>Editar Serviço - Detran</title>
         <link href="styles/main.css" rel="stylesheet" type="text/css">
         <link href="styles/forms.css" rel="stylesheet" type="text/css">
     </head>
@@ -34,7 +34,41 @@
                     </div>
 
                     <div class="menu">
-                        <a href="listar-servicos colab.html">
+
+                        <a href="cadastrar-usuario.html">
+                            <div class="link">
+                                <div class="icon">
+                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-user'></use>
+                                    </svg>
+                                </div>
+                                <div class="text">Cadastrar Usuário</div>
+                            </div>
+                        </a>
+
+                        <a href="listar-usuarios.html">
+                            <div class="link">
+                                <div class="icon">
+                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-user'></use>
+                                    </svg>
+                                </div>
+                                <div class="text">Visualizar Usuários</div>
+                            </div>
+                        </a>
+
+                        <a href="selecionar-servico.html">
+                            <div class="link">
+                                <div class="icon">
+                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-services'></use>
+                                    </svg>
+                                </div>
+                                <div class="text">Cadastrar Serviço</div>
+                            </div>
+                        </a>
+
+                        <a href="listar-servicos.html">
                             <div class="link">
                                 <div class="icon">
                                     <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
@@ -88,49 +122,37 @@
 
             <div class="site-content">
                 <div class="title">
-                    <h1>Iniciar Serviço - Detran</h1>
+                    <h1>Editar Serviço nº 0001 - Detran</h1>
                 </div>
 
                 <div class="form-wrapper new">
                     <form>
                       
                         <div class="input-wrapper">
-                            <div class="label">Modelo</div>
+                            <div class="label">Cliente</div>
                             <div class="input">
                                 <input type="text">
                             </div>
-                            <div class="helper-text">Modelo do Veículo</div>
+                            <div class="helper-text">Nome Cliente</div>
                         </div>
 
                         <div class="input-wrapper">
-                            <div class="label">Placa</div>
+                            <div class="label">Endereço Coleta</div>
                             <div class="input">
                                 <input type="text">
                             </div>
-                            <div class="helper-text">Placa do Veículo</div>
+                            <div class="helper-text">Endereço Completo</div>
                         </div>
                         
                         <div class="input-wrapper">
-                            <div class="label">Cor</div>
+                            <div class="label">Nome e Telefone do Responsável</div>
                             <div class="input">
                                 <input type="text">
                             </div>
-                            <div class="helper-text">Cor do Veículo</div>
-                        </div>
-
-                        <div class="input-wrapper icon">
-                            <div class="label">Tipo do Veículo</div>
-                            <div class="input">
-                                <input type="text">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#arrow-down'></use>
-                                    </svg>
-                                </div>
-                            </div>
+                            <div class="helper-text">Contatos do Responsável</div>
                         </div>
                         
-                        <button type="submit">INICIAR FOTOGRAFIA</button>
+                        <button type="submit">EDITAR</button>
                     </form>
                 </div>
             </div>
@@ -163,10 +185,6 @@
                 </symbol>
                 <symbol id="icon-edit">
                     <path d="M17.896 0.961173C17.2806 0.345645 16.4458 -8.68844e-05 15.5754 1.35607e-05C14.7045 -0.00249757 13.8689 0.343837 13.2552 0.961725L1.96498 12.251C1.87131 12.3453 1.80065 12.46 1.75841 12.5861L0.0441642 17.7289C-0.105449 18.178 0.137377 18.6634 0.586518 18.8129C0.673654 18.842 0.764909 18.8568 0.856716 18.8569C0.948724 18.8567 1.04018 18.842 1.12757 18.8132L6.27036 17.0989C6.39667 17.0567 6.51143 16.9857 6.6055 16.8915L17.8956 5.60139C19.1771 4.32011 19.1772 2.2426 17.896 0.961173Z"/>                        
-                </symbol>
-
-                <symbol id="arrow-down">
-                    <path d="M21.2337 6.7682L21.2327 6.76726C20.8764 6.41091 20.2979 6.41091 19.9416 6.76726L20.2951 7.12082L19.9416 6.76726L11.4996 15.2092L3.05846 6.76728L3.05844 6.76726C2.70209 6.41091 2.12362 6.41091 1.76726 6.76726C1.41091 7.12362 1.41091 7.70209 1.76726 8.05844L10.8526 17.1437C10.8529 17.1441 10.8533 17.1444 10.8536 17.1448C11.0318 17.3243 11.267 17.4135 11.4996 17.4135C11.7329 17.4135 11.9663 17.3239 12.1438 17.1482L12.1456 17.1464L21.2328 8.05925L21.2337 8.05832C21.5888 7.70134 21.5887 7.12516 21.2337 6.7682Z"/>
                 </symbol>
 
                 <symbol id="icon-moon">

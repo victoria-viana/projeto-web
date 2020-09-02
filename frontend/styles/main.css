@@ -640,19 +640,19 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
     border: solid 1px #2F2F2F ;
 }
 
-.profile .icon svg use{
+.profile div#pageMode .icon svg use{
     display: none;
 }
 
-.dark .profile .icon svg use:nth-child(1){
+.dark .profile div#pageMode .icon svg use:nth-child(1){
     display: none;
 }
 
-.dark .profile .icon svg use:nth-child(2){
+.dark .profile div#pageMode .icon svg use:nth-child(2){
     display: block;
 }
 
-.profile .icon svg use:nth-child(1){
+.profile div#pageMode .icon svg use:nth-child(1){
     display: block;
 }
 
@@ -668,7 +668,7 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
 }
 
 .contrast .site-wrapper{
-    background-color: #000000; /*não importante*/
+    background-color: #000000;
 }
 .contrast .site-wrapper .site-header{
     border-bottom: solid 1px #FFF000;
@@ -716,7 +716,7 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
 .contrast .site-wrapper .site-content nav.actions a .action .text{
     background-color: #000000;
 }
-.contrast .site-wrapper .site-content nav.actions a .action .icon svg{ /*ver linha 180 que força o fundo original*/
+.contrast .site-wrapper .site-content nav.actions a .action .icon svg{
     background-color: #000000;
 }
 
@@ -741,49 +741,43 @@ Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da out
     border: solid 1px #FFF000;
 }
 
-/* ativar alto contrast */
-.toggle-contrast {
-    margin-left: 10px;
+.contrast .site-content nav.photos .text{
+    color: #CFCFCF;
 }
 
-.toggle-contrast input[type=checkbox]{
-    height: 0;
-    width: 0;
-    visibility: hidden;
+.contrast .site-content nav.actions a .action{
+    border: solid 1px #FFF000;
 }
 
-.toggle-contrast label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 52px;
-    height: 27px;
-    background: #1A1A1A;
-    float: right;
-    border-radius: 100px;
-    position: relative;
+.contrast .site-content nav.photos .photo-wrapper {
+    background: url(https://via.placeholder.com/102x78/2C2C2C);
+    border: solid 1px #FFF000;
 }
 
-.toggle-contrast label:after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border-radius: 90px;
-    transition: 0.3s;
+.contrast .site-content nav.photos .photos-button textarea{
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
-.toggle-contrast input:checked + label {
-    background: #FFF500;
+.contrast .menu a .link .icon, .profile a .link .icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    color: #FFFFFF;
 }
 
-.toggle-contrast input:checked + label:after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
+.profile div#pageContrast .icon svg use{
+    display: none;
 }
 
-.toggle-contrast label:active:after {
-    width: 45px;
+.contrast  .profile div#pageContrast .icon svg use:nth-child(1){
+    display: none;
+}
+
+.contrast  .profile div#pageContrast .icon svg use:nth-child(2){
+    display: block;
+}
+
+.profile div#pageContrast .icon svg use:nth-child(1){
+    display: block;
 }
