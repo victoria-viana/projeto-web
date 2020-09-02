@@ -412,6 +412,12 @@ form input[type="file"]{
     cursor: pointer;
 }
 
+.results-wrapper .result .actions div.view{
+    width: 24px;
+    height: 17px;
+    cursor: pointer;
+}
+
 .results-wrapper .result .actions .desable{
     margin-left: 11px;
 }
