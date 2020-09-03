@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastrar Usuário - Rode Transportes</title>
+        <title>Listar Serviços - Rode Transportes</title>
         <link href="styles/main.css" rel="stylesheet" type="text/css">
         <link href="styles/forms.css" rel="stylesheet" type="text/css">
     </head>
@@ -19,7 +19,7 @@
                                     <use href='#icon-menu'></use>
                                 </svg>
                             </div>
-                            <a href="home.html">
+                            <a href="home-colab.html">
                                 <div class="logo">
                                     <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
                                 </div>
@@ -34,41 +34,7 @@
                     </div>
 
                     <div class="menu">
-
-                        <a href="cadastrar-usuario.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-user'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Cadastrar Usuário</div>
-                            </div>
-                        </a>
-
-                        <a href="listar-usuarios.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-user'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Visualizar Usuários</div>
-                            </div>
-                        </a>
-
-                        <a href="selecionar-servico.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-services'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Cadastrar Serviço</div>
-                            </div>
-                        </a>
-
-                        <a href="listar-servicos.html">
+                        <a href="home-colab.html">
                             <div class="link">
                                 <div class="icon">
                                     <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
@@ -81,7 +47,7 @@
                     </div>
 
                     <div class="profile">
-                        <a href="/frontend/cadastrar-usuario.html">
+                        <a href="#">
                             <div class="link">
                                 <div class="text">Configurações de Perfil</div>
                             </div>
@@ -122,54 +88,66 @@
 
             <div class="site-content">
                 <div class="title">
-                    <h1>Cadastrar novo usuário</h1>
+                    <h1>Bem Vindo, Motorista.</h1>
                 </div>
 
                 <div class="form-wrapper new">
                     <form>
-                        <div class="profile-file-input">
-                            <div class="icon-pencil">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-edit'></use>
-                                </svg>
-                            </div>
-                        </div>
-                        <input type="file" class="input-file">
-                        <div class="input-wrapper">
-                            <div class="label">Usuário</div>
+                        <div class="input-wrapper icon search">
+                            <div class="label">Buscar Serviço</div>
                             <div class="input">
                                 <input type="text">
-                            </div>
-                            <div class="helper-text">Nome completo</div>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <div class="label">CPF</div>
-                            <div class="input">
-                                <input type="text">
-                            </div>
-                            <div class="helper-text">CPF</div>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <div class="label">Senha</div>
-                            <div class="input">
-                                <input type="password">
-                            </div>
-                            <div class="helper-text">use pelo menos 6 caracteres</div>
-                        </div>
-
-                        <div class="input-wrapper">
-                            <div class="label">Permissão</div>
-                            <div class="input">
-                                <input type="text">
-                                <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                            <use href='#icon-search'></use>
+                                        </svg>
+                                    </div>
                             </div>
                         </div>
 
-                        <button type="submit">CADASTRAR</button>
                     </form>
                 </div>
+
+                <div class="results-wrapper">
+                    <div class="result">
+                        <div class="name">Serviço 1 - Outros</div>
+                        <div class="actions">
+                            <a href="visualizar-servico-outros colab.html">
+                                <div class="view">
+                                    <svg width='100%' height='100%' viewBox='0 0 24 17' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-view'></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <div class="name">Serviço 2 - Detran</div>
+                        <div class="actions">
+                            <a href="visualizar-servicos-detran colab.html">
+                                <div class="view">
+                                    <svg width='100%' height='100%' viewBox='0 0 24 17' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-view'></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="result">
+                        <div class="name">Serviço 3 - Outros</div>
+                        <div class="actions">
+                            <a href="visualizar-servico-outros colab.html">
+                                <div class="view">
+                                    <svg width='100%' height='100%' viewBox='0 0 24 17' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-view'></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
             </div>
         </div>
         
@@ -249,7 +227,7 @@
             <path d="M0.0305176 26H25.9694V0L0.0305176 26ZM22.752 18.5289V20.1649H20.1889V22.728H18.5529V20.1649H16.0444V18.5289H18.5529V16.0204H20.1889V18.5289H22.752Z"/>
             <path d="M9.51411 5.31825H2.80652V6.95425H9.51411V5.31825Z"/>
         </symbol>
-
+        
         <symbol id="icon-view">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C6.54545 0 1.88727 3.39273 0 8.18182C1.88727 12.9709 6.54545 16.3636 12 16.3636C17.4545 16.3636 22.1127 12.9709 24 8.18182C22.1127 3.39273 17.4545 0 12 0ZM12 13.6364C8.9891 13.6364 6.54546 11.1927 6.54546 8.18182C6.54546 5.17091 8.9891 2.72727 12 2.72727C15.0109 2.72727 17.4546 5.17091 17.4546 8.18182C17.4546 11.1927 15.0109 13.6364 12 13.6364ZM12 4.90908C10.1891 4.90908 8.72729 6.3709 8.72729 8.18181C8.72729 9.99272 10.1891 11.4545 12 11.4545C13.8109 11.4545 15.2727 9.99272 15.2727 8.18181C15.2727 6.3709 13.8109 4.90908 12 4.90908Z"/>
         </symbol>
@@ -262,12 +240,6 @@
         <script type="text/javascript" src="js/darkmode.js"></script>
         <script type="text/javascript" src="js/contraste.js"></script>
         <script>
-            const inputFile = document.querySelector('.profile-file-input');
-    
-            inputFile.addEventListener('click', () => {
-                document.querySelector('.input-file').click();
-            });
-    
             document.addEventListener('DOMContentLoaded', function () {
                 let inputs = document.querySelectorAll('.input-wrapper');
             
