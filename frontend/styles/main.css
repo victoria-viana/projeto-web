@@ -1,0 +1,875 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    justify-content:center;
+    align-items: center;
+    z-index: 1000000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 20px;
+    background-color: rgba(0,0,0,.7);
+}
+
+
+
+.overlay .modal{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.overlay .modal .modal-message{
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay .modal .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.overlay .modal .btn{
+    cursor: pointer;
+}
+
+.overlay .modal .btn.hidded{
+    display: none;
+}
+
+.overlay .modal .close svg{
+    fill: #000;
+}
+
+.overlay.opened{
+    display: flex;
+}
+
+.site-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+.logo-wrapper{
+    margin-top: 111px;
+    transform: translateX(-27.5px);
+}
+.form-wrapper{
+    margin-top: 69px;
+    min-width: 316px;
+}
+.form-wrapper.new{
+    margin-top: 18px;
+}
+.form-wrapper form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.form-wrapper.new form{
+    width: 100%;
+}
+.form-wrapper form input{
+    width: 100%;
+    height: 40px;
+}
+.form-wrapper form a{
+    margin-top: 11px;
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.button-wrapper{
+    width: 100%;
+}
+
+a.btn{
+    margin-top: 27px;
+    width: 100%;
+    display: block;
+}
+
+.btn{
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 36px;
+    background-color: #29166f;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 0;
+    outline: none;
+}
+
+.form-wrapper form button, nav.photos button{
+    margin-top: 27px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 36px;
+    background-color: #29166f;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 0;
+    outline: none;
+}
+.form-wrapper form button.login{
+    width: 100%;
+}
+header, nav{
+    width: 100%;
+}
+.site-header{
+    width: 100%;
+    height: 50px;
+    background-color: #29166f;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* start menu and profile nav */
+.menu{
+    background-color: #29166f;
+    width: 80%;
+    height: 100vh;
+    display: block;
+    box-shadow: 0px 5px 11px 0px #000;
+    transform: translateX(-110%);
+    transition: transform .5s ease-in-out;
+    will-change: transform;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 1000;
+}
+
+.profile {
+    background-color: #29166f;
+    width: 80%;
+    height: 100vh;
+    display: block;
+    box-shadow: 0px 5px 11px 0px #000;
+    transform: translateX(110%);
+    transition: transform .5s ease-in-out;
+    will-change: transform;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 1000;
+}
+
+.menu a, .profile a{
+    text-decoration: none;
+}
+
+.menu a .link, .profile a .link{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #fff;
+}
+
+.menu a .link .icon, .profile a .link .icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+.menu a .link .text, .profile a .link .text{
+    color: #fff;
+    font-size: 18px;
+}
+
+
+.menu a .link .icon svg, .profile a .link .icon svg{
+    fill: #fff;
+}
+
+.menu.opened , .profile.opened {
+    transform: translateX(0) !important;
+}
+
+/* end menu nav */
+
+.site-header .app-nav{
+    display: flex;
+    align-items: center;
+    width: 116px;
+    
+}
+.site-header .app-nav .menu-icon{
+    width: 26px;
+    height: 26px;
+    margin-right: 19px;
+    cursor: pointer;
+}
+.site-header .app-nav .logo{
+    display: flex;
+    width: 71px;
+    height: 37px;
+}
+.site-header .app-nav .logo img{
+    height: 100%;
+    
+}
+.site-header .app-nav .menu-icon svg{
+    fill: #fff;
+}
+.site-header .user-nav{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.site-header .user-nav .profile-img{
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.site-header .user-nav .profile-img img{
+    height: 100%;
+    
+}
+
+.site-content{
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-content.center{
+    align-items: center;
+}
+
+.site-content .title{
+    margin-top: 43px;
+}
+
+.site-content .title h1{
+    font-size: 24px;
+}
+
+.site-content nav.actions{
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.site-content nav.actions a{
+    text-decoration: none;
+}
+
+.site-content nav.actions a .action{
+    width: 156px;
+    height: 156px;
+    border-radius: 8px;
+    margin-bottom: 19px;
+    background-color: #29166f;
+    padding-top: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.site-content nav.photos{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.site-content nav.photos .photos-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.site-content nav.photos .photos-button textarea{
+    border: 2px solid #29166f;
+    outline: none;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.site-content nav.photos .photo-wrapper{
+    width: 102px;
+    height: 78px;
+    border: 2px solid #29166f; 
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px;
+    background: url("https://via.placeholder.com/102x78");
+    padding-top: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.site-content nav.photos .text{
+    text-align: center;
+    width: 102px;
+    margin-top: 10px; 
+    font-size: 14px; 
+}
+
+.site-content nav.photos input[type="file"] {
+    display: none;
+}
+.site-content nav.photos input {
+    width: 100%;
+    height: 40px;
+}
+
+
+/*.site-content nav.photos .input-wrapper {
+    position: relative;
+    margin-bottom: 13px;
+    min-width: 100%;
+}
+
+.site-content nav.photos .input{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.site-content nav.photos .label{
+    font-size: 16px;
+    color: #888;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    transition: all .2s ease-in-out;
+}*/
+
+nav.actions a .action .icon{
+    width: 66px;
+    height: 66px;   
+}
+
+nav.actions a .action .icon svg{
+    fill: #fff;  
+    
+}
+
+nav.actions a .action .text{
+    color: #fff;
+    text-align: center;
+    margin-top: 11px;
+    font-size: 18px;
+    max-width: 120px;
+    
+}
+
+form .profile-file-input{
+    position: relative;
+    width: 72px;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    height: 72px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background-color: rgba(41, 22, 111, .3);
+}
+
+form .profile-file-input .icon-pencil{
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+form input[type="file"]{
+    display: none;
+}
+
+.results-wrapper{
+    margin-top: 40px;
+}
+
+.results-wrapper .result:last-child{
+    margin-bottom: 0;
+}
+
+.results-wrapper .result{
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #29166f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 13px;
+    margin-bottom: 18px;
+}
+
+.results-wrapper .result.disabled, .results-wrapper .result.disabled *{
+    opacity: 0.7;
+    cursor: not-allowed !important;
+}
+
+.results-wrapper .result .name{
+    font-size: 16px;
+    color: #fff;
+    
+}
+
+.results-wrapper .result .actions{
+    display: flex;
+    
+}
+
+.results-wrapper .result .actions div{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.results-wrapper .result .actions div.view{
+    width: 24px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.results-wrapper .result .actions .desable{
+    margin-left: 11px;
+}
+
+.results-wrapper .result.disabled .actions .desable{
+    display: none;
+}
+
+.results-wrapper .result .actions div svg{
+    fill: #fff;
+    
+}
+
+.form-box{
+    border: 2px;
+    border-color: #29166f;
+}
+
+.site-content nav.actions button{
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    height: 36px;
+    background-color: #29166f;
+    border-radius: 4px;
+    font-size: 16px;
+    border: 0;
+    outline: none;
+    
+}
+
+@media (min-width: 1366px) {
+    .form-wrapper form button.login{
+        width: 100% !important;
+    }
+    .site-header{
+        height: 60px;
+        padding: 12px 40px;
+    }
+
+    .overlay .modal{
+        max-width: 400px;
+        padding: 20px;
+    }
+    
+
+    /* start menu and profile nav */
+    .menu, .profile{
+        width: 400px;
+        margin-top:10px
+    }
+    .menu a .link, .profile a .link{
+        padding: 20px;
+    }
+    .menu a .link .icon, .profile a .link .icon{
+        width: 36px;
+        height: 36px;        
+    }
+    .menu a .link .text, .profile a .link .text{
+        font-size: 24px;
+    }
+    /* end menu nav */
+    .site-header .app-nav{
+        width: 144px;
+    }
+    .site-header .app-nav .logo{
+        width: 97px;
+        height: 50px;
+    }
+    .site-header .user-nav{
+        width: 36px;
+        height: 36px;
+    }
+    .site-header .user-nav .profile-img{
+        width: 36px;
+        height: 36px;
+    }
+
+    .site-content{
+        padding: 0 39px;
+    }
+    .site-content .title{
+        margin-top: 25px;
+    }
+    .site-content .title h1{
+        font-size: 48px;
+    }
+    
+    .site-content nav.actions{
+        max-width: 1366px;
+        justify-content: flex-start;  
+    }
+    
+    .site-content nav.actions a {
+        width: 273px;
+        height: 162px;
+        display: block;
+        margin: 20px;
+    }
+    .site-content nav.actions a .action{
+        width: 100%;
+        height: 100%;
+        padding-top: 25px;
+    }
+    nav.actions a .action .text{
+        margin-top: 23px;
+        max-width: 100%;
+    }
+
+    .site-content nav.photos .photos-wrapper{
+        width: 440px;
+        justify-content: flex-start;
+    }
+
+    .site-content nav.photos .photos-button{
+        width: 385px;
+        margin: 0 20px;
+    }
+
+    .site-content nav.photos .photos-wrapper .photo{
+        margin: 20px;
+    }
+    
+    form .profile-file-input{
+        margin-right: calc(100% - 72px);
+    }
+
+    .form-wrapper.new form{
+        width: 679px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    form .input-wrapper.search{
+        min-width: 672px;
+    }
+
+    .results-wrapper{
+        width: 672px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .results-wrapper .result{
+        max-width: 328px;
+    }
+    
+    .site-content nav.actions .action{
+
+        margin-right: 100px;
+    }
+
+    .site-content nav.actions button{
+        width: 200px !important;
+        margin-top: 120px;
+        
+    }
+
+    .button-wrapper .btn{
+        width: 200px;
+    }
+
+    a.btn{
+        width: 200px;
+    }
+}
+
+/* Dark Mode */
+
+/*
+Perguntar pro Everton, pra escrita dentro do input, se é melhor assim ou da outra maneira
+.dark *{
+    color: #CFCFCF;
+}
+*/
+
+.dark{
+    background-color: #1A1A1A;
+}
+
+
+.dark .site-header{
+    border-bottom: solid 1px #2F2F2F;
+}
+
+
+
+.dark .form-wrapper form button {
+    color: #CFCFCF;
+    border: solid 1px #2F2F2F ;
+    transition: 0.5s;
+}
+
+
+.dark .site-content .title h1{
+    color: #CFCFCF;
+}
+
+
+.dark .menu, .dark .profile{
+    background-color: #1A1A1A;
+}
+
+.dark form .profile-file-input{
+    background-color: #1F1F1F;
+    border: solid 1px #CFCFCF ;
+    
+}
+
+.dark .site-content nav.photos .text{
+    color: #CFCFCF ;
+}
+
+.dark form .profile-file-input .icon-pencil{
+    fill: #CFCFCF;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dark .site-content nav.actions a .action{
+    border: solid 1px #2F2F2F ;
+}
+
+.dark .site-content nav.photos .photo-wrapper {
+    background: url(https://via.placeholder.com/102x78/2C2C2C);
+    border: solid 1px #2F2F2F ;
+}
+
+.dark .site-content nav.photos .photos-button textarea{
+    background-color: #2C2C2C;
+    color: #CFCFCF;
+    border: solid 1px #2F2F2F ;
+}
+
+.profile div#pageMode .icon svg use{
+    display: none;
+}
+
+.dark .profile div#pageMode .icon svg use:nth-child(1){
+    display: none;
+}
+
+.dark .profile div#pageMode .icon svg use:nth-child(2){
+    display: block;
+}
+
+.profile div#pageMode .icon svg use:nth-child(1){
+    display: block;
+}
+
+/* alto contraste */
+
+.contrast *{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.contrast{
+    background-color: #000000;
+}
+
+.contrast .site-wrapper{
+    background-color: #000000;
+}
+.contrast .site-wrapper .site-header{
+    border-bottom: solid 1px #FFF000;
+}
+.contrast .site-wrapper .site-header .app-nav{
+    background-color: #000000;
+}
+.contrast .site-wrapper .site-header .app-nav .logo img{
+    background-color: #000000;
+}
+.contrast .site-header .user-nav .profile-img img{
+    background-color: #000000;
+}
+.contrast .site-header .app-nav .menu-icon svg{
+    fill: #CFCFCF;
+}
+
+.contrast .form-wrapper form button, .contrast  .btn{
+    background-color: #000000;
+    border: solid 1px #FFF000;
+}
+.contrast .site-content nav.photos button{
+    background-color: #000000;
+    border: solid 1px #FFF000;
+}
+.contrast form .profile-file-input{
+    background-color: #1F1F1F;
+    border: solid 1px #CFCFCF;
+    
+}
+
+.contrast form .profile-file-input .icon-pencil{
+    fill: #CFCFCF;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.contrast form .profile-file-input .icon-pencil svg {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.contrast .site-wrapper .site-content nav.actions a .action{
+    background-color: #000000;
+    border: solid 1px #FFF000;
+}
+.contrast .site-wrapper .site-content nav.actions a .action .text{
+    background-color: #000000;
+}
+.contrast .site-wrapper .site-content nav.actions a .action .icon svg{
+    background-color: #000000;
+}
+
+.contrast .form-wrapper .profile-file-input{
+    background-color: #000000;
+    border: solid 1px #FFFFFF;
+}
+.contrast .form-wrapper{
+    color: #FFFFFF;
+}
+.contrast .form-wrapper .label{
+    color: #FFFFFF;
+}
+.contrast .form-wrapper .input{
+    color: #FFFFFF;
+}
+.contrast .form-wrapper .helper-text{
+    color: #FFFFFF;
+}
+.contrast .results-wrapper .result{
+    background-color: #000000;
+    border: solid 1px #FFF000;
+}
+
+.contrast .site-content nav.photos .text{
+    color: #CFCFCF;
+}
+
+.contrast .site-content nav.actions a .action{
+    border: solid 1px #FFF000;
+}
+
+.contrast .site-content nav.photos .photo-wrapper {
+    background: url(https://via.placeholder.com/102x78/2C2C2C);
+    border: solid 1px #FFF000;
+}
+
+.contrast .site-content nav.photos .photos-button textarea{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.contrast .menu a .link .icon, .profile a .link .icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    color: #FFFFFF;
+}
+
+.profile div#pageContrast .icon svg use{
+    display: none;
+}
+
+.contrast  .profile div#pageContrast .icon svg use:nth-child(1){
+    display: none;
+}
+
+.contrast  .profile div#pageContrast .icon svg use:nth-child(2){
+    display: block;
+}
+
+.profile div#pageContrast .icon svg use:nth-child(1){
+    display: block;
+}
