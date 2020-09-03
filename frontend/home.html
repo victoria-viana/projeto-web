@@ -359,12 +359,14 @@
 </script>
 <script id="entry-template-colaborador" type="text/x-handlebars-template">
     {{#each this }}
-        <div class="result">
-            <div class="name">Serviço #ROD{{ this.code }} - {{ checkType this.type }}</div>
-            <div class="actions">
-                
+        <a href="visualizar-servico-{{ checkType this.type }}.html">
+            <div class="result">
+                <div class="name">Serviço #ROD{{ this.code }} - {{ checkType this.type }}</div>
+                <div class="actions">
+                    
+                </div>
             </div>
-        </div>
+        </a>
     {{/each}}
 </script>
 

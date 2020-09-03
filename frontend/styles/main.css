@@ -450,6 +450,10 @@ form input[type="file"]{
     margin-top: 40px;
 }
 
+.results-wrapper a{
+    text-decoration: none;
+}
+
 .results-wrapper .result:last-child{
     margin-bottom: 0;
 }
