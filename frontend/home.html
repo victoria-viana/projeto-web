@@ -120,47 +120,9 @@
                     <h1>Bem vindo, </h1>
                 </div>
                 <nav class="actions">
-                    <a href="cadastrar-usuario.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-add-user'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Cadastrar Usuário</div>
-                        </div>
-                    </a>
-                    <a href="listar-usuarios.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-users'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Visualizar Usuários</div>
-                        </div>
-                    </a>
-                    <a href="selecionar-servico.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-services'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Cadastrar Serviço</div>
-                        </div>
-                    </a>
-                    <a href="listar-servicos.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-view-services'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Visualizar Serviços</div>
-                        </div>
-                    </a>
+                    
                 </nav>
+
             </div>
         </div>
         
@@ -327,6 +289,123 @@
     </defs>
 </svg>
 <!-- end svg -->
+
+
+<script src="js/handlebars.min-v4.7.6.js"></script>
+
+<script id="entry-template-admin" type="text/x-handlebars-template">
+    <a href="cadastrar-usuario.html">
+        <div class="action">
+            <div class="icon">
+                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                    <use href='#icon-add-user'></use>
+                </svg>
+            </div>
+            <div class="text">Cadastrar Usuário</div>
+        </div>
+    </a>
+    <a href="listar-usuarios.html">
+        <div class="action">
+            <div class="icon">
+                <svg width='100%' height='100%' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                    <use href='#icon-users'></use>
+                </svg>
+            </div>
+            <div class="text">Visualizar Usuários</div>
+        </div>
+    </a>
+    <a href="selecionar-servico.html">
+        <div class="action">
+            <div class="icon">
+                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                    <use href='#icon-services'></use>
+                </svg>
+            </div>
+            <div class="text">Cadastrar Serviço</div>
+        </div>
+    </a>
+    <a href="listar-servicos.html">
+        <div class="action">
+            <div class="icon">
+                <svg width='100%' height='100%' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                    <use href='#icon-view-services'></use>
+                </svg>
+            </div>
+            <div class="text">Visualizar Serviços</div>
+        </div>
+    </a>
+</script>
+<script id="entry-template-gerente" type="text/x-handlebars-template">
+    <a href="selecionar-servico.html">
+    <div class="action">
+        <div class="icon">
+            <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                <use href='#icon-services'></use>
+            </svg>
+        </div>
+        <div class="text">Cadastrar Serviço</div>
+    </div>
+</a>
+<a href="listar-servicos.html">
+    <div class="action">
+        <div class="icon">
+            <svg width='100%' height='100%' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                <use href='#icon-view-services'></use>
+            </svg>
+        </div>
+        <div class="text">Visualizar Serviços</div>
+    </div>
+</a>
+</script>
+<script id="entry-template-colaborador" type="text/x-handlebars-template">
+    {{#each this }}
+        <div class="result">
+            <div class="name">Serviço #ROD{{ this.code }} - {{ checkType this.type }}</div>
+            <div class="actions">
+                
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+
+<script>
+    let context = null;
+    function showContent(permission, context) {
+
+        if(permission === '1'){
+            let source = document.getElementById("entry-template-admin").innerHTML;
+            let template = Handlebars.compile(source);
+            let html = template(context);
+            document.querySelector('nav.actions').innerHTML = html;
+        }else if(permission === '2'){
+            let source = document.getElementById("entry-template-gerente").innerHTML;
+            let template = Handlebars.compile(source);
+            let html = template(context);
+            document.querySelector('nav.actions').innerHTML = html;
+        }
+    }
+</script>
+
+
+<script>    
+    function showServices(context) {
+        let source = document.getElementById("entry-template-colaborador").innerHTML;
+        Handlebars.registerHelper('checkType', function (value) {
+            if(!value){
+                return 'Outros';
+            }else{
+                return 'Detran';
+            }
+        });
+        let template = Handlebars.compile(source);
+        let html = template(context);
+        document.querySelector('.results-wrapper').innerHTML = html;
+    }
+</script>
+
+
+
 <div class="overlay">
             <div class="modal">
                 <div class="close" onclick="closeModal()">
@@ -344,7 +423,36 @@
         <script type="text/javascript" src="js/contraste.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
+                let context = null;
+                let context2 = null;
+                showContent(localStorage.getItem('permission'), context);
                 document.querySelector('.site-content .title h1').innerHTML = `Bem vindo(a) ${localStorage.getItem('name')}!`;
+
+                if(localStorage.getItem('permission') === '3'){
+                    document.querySelector('.site-content').innerHTML += `<div class="results-wrapper"></div>`;
+                }
+
+                function getServices() {
+                    myHeaders = new Headers({
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                    });
+                    fetch('http://localhost:3333/service', {
+                    method: 'get',
+                    headers: myHeaders,
+                    }).then(function(response) {
+                        return response.json();
+                    }).then(function(response){
+                        context2 = response;
+                        if(response.error){
+                            showModal(response.error);
+                        }else{
+                            showServices(context2);
+                        }
+                    });
+                }
+
+                getServices();
             });
         </script>
     </body>

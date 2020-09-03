@@ -138,64 +138,7 @@
                     </form>
                 </div>
 
-                <div class="results-wrapper">
-                    <div class="result">
-                        <div class="name">Serviço 1 - Outros</div>
-                        <div class="actions">
-                            <a href="editar-servico-outros.html">
-                                <div class="edit">
-                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-edit-box'></use>
-                                    </svg>
-                                </div>
-                            </a>
-                            
-                            <div class="delete">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-trash'></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="result">
-                        <div class="name">Serviço 2 - Detran</div>
-                        <div class="actions">
-                            <a href="editar-servico-detran.html">
-                                <div class="edit">
-                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-edit-box'></use>
-                                    </svg>
-                                </div>
-                            </a>
-                            
-                            <div class="delete">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-trash'></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="result">
-                        <div class="name">Serviço 3 - Outros</div>
-                        <div class="actions">
-                            <a href="editar-servico-outros.html">
-                                <div class="edit">
-                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-edit-box'></use>
-                                    </svg>
-                                </div>
-                            </a>
-                            
-                            <div class="delete">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-trash'></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-            </div>
+                <div class="results-wrapper"></div>
         </div>
         
         <!-- start svg -->
@@ -359,6 +302,84 @@
 
     </defs>
 </svg>
+
+
+<script src="js/handlebars.min-v4.7.6.js"></script>
+
+<script>
+    function deleteService(code){
+        myHeaders = new Headers({
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${localStorage.getItem('token')}`,
+        });
+        fetch('http://localhost:3333/service', {
+        method: 'delete',
+        headers: myHeaders,
+        body: JSON.stringify({
+            code: code
+        })
+        }).then(function(response) {
+            return response.json();
+        }).then(function(response){
+            context = response;
+            if(response.error){
+                showModal(response.error);
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            }else{
+                showModal(response.alert);
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+                
+            }
+        });
+    }
+</script>
+
+<script id="services-template" type="text/x-handlebars-template">
+    {{#each this }}
+        <div class="result">
+            <div class="name">Serviço #ROD{{ this.code }} - {{ checkType this.type }}</div>
+            <div class="actions">
+                <a href="editar-servico-detran.html">
+                    <div class="edit">
+                        <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                            <use href='#icon-edit-box'></use>
+                        </svg>
+                    </div>
+                </a>
+                
+                <div class="delete" onclick="deleteService({{ this.code }})">
+                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                        <use href='#icon-trash'></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+
+<script>
+    let context = null;
+    function showServices(context) {
+        let source = document.getElementById("services-template").innerHTML;
+        Handlebars.registerHelper('checkType', function (value) {
+            if(!value){
+                return 'Outros';
+            }else{
+                return 'Detran';
+            }
+        });
+        let template = Handlebars.compile(source);
+        let html = template(context);
+        document.querySelector('.results-wrapper').innerHTML = html;
+    }
+</script>
+
+
 <!-- end svg -->
 <div class="overlay">
             <div class="modal">
@@ -396,7 +417,31 @@
                     input.querySelector('.input input').addEventListener('focus', () =>{
                         input.classList.add('active');
                     });
-                });  
+                }); 
+                
+                
+                function getServices() {
+                    myHeaders = new Headers({
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                    });
+                    fetch('http://localhost:3333/service', {
+                    method: 'get',
+                    headers: myHeaders,
+                    }).then(function(response) {
+                        return response.json();
+                    }).then(function(response){
+                        context = response;
+                        if(response.error){
+                            showModal(response.error);
+                        }else{
+                            showServices(context);
+                        }
+                    });
+                }
+
+                getServices();
+
             });
         </script>
     </body>
