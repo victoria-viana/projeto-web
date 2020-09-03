@@ -15,7 +15,8 @@ app.use(express.json());
 
 app.use(routes);
 
-app.get('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
+
+app.use('/uploads', express.static(path.resolve(__dirname, 'uploads')));
 
 try {
     mongoose.connect(`mongodb+srv://dbAdmin:${process.env.DBPASSWD}@cluster-rode.anech.mongodb.net/rodetransportesvistoria?retryWrites=true&w=majority`, {

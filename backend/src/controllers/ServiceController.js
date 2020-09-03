@@ -5,7 +5,7 @@ module.exports = {
         try {
             const services = await Service.find();    
 
-            if(req.user && req.permission === 1){
+            if(req.user && req.permission === 1 || req.permission === 2){
                 return res.json(services);
             }else{
                 res.status(401).json({
@@ -41,7 +41,7 @@ module.exports = {
 
             const service = await Service.findOne({ code }); 
 
-            if(req.user && req.permission === 1){
+            if(req.user && req.permission === 1 || req.permission === 2){
                 if(!service){
                     const newService = await Service.create({
                         code,
@@ -109,7 +109,7 @@ module.exports = {
         
         let service = await Service.findOne({ code });
 
-        if(req.user && req.permission === 1){
+        if(req.user && req.permission === 1 || req.permission === 2){
             if(service != null){
 
                 await Service.findOneAndUpdate({
@@ -164,7 +164,7 @@ module.exports = {
 
         const remove = await Service.deleteOne({ code });
 
-        if(req.user && req.permission === 1){
+        if(req.user && req.permission === 1 || req.permission === 2){
             if(remove.deletedCount > 0){
                 return res.json({ alert: `Serviço deletado com sucesso!`});
             }else{

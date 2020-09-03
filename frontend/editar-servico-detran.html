@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home - Rode Transportes</title>
+        <title>Editar Serviço - Detran</title>
         <link href="styles/main.css" rel="stylesheet" type="text/css">
+        <link href="styles/forms.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
@@ -18,7 +19,7 @@
                                     <use href='#icon-menu'></use>
                                 </svg>
                             </div>
-                            <a href="home.html">
+                            <a href="/">
                                 <div class="logo">
                                     <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
                                 </div>
@@ -81,8 +82,8 @@
 
                     <div class="profile" style="transform: translateX(110%);">
                         
-                        
-                        <a href="#" >
+
+                        <a href="#">
                             <div class="link" id="pageMode">
                                 <div class="icon" >
                                     <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
@@ -117,54 +118,42 @@
 
             <div class="site-content">
                 <div class="title">
-                    <h1>Bem vindo, </h1>
+                    <h1>Editar Serviço nº 0001 - Detran</h1>
                 </div>
-                <nav class="actions">
-                    <a href="cadastrar-usuario.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-add-user'></use>
-                                </svg>
+
+                <div class="form-wrapper new">
+                    <form>
+                      
+                        <div class="input-wrapper">
+                            <div class="label">Cliente</div>
+                            <div class="input">
+                                <input type="text">
                             </div>
-                            <div class="text">Cadastrar Usuário</div>
+                            <div class="helper-text">Nome Cliente</div>
                         </div>
-                    </a>
-                    <a href="listar-usuarios.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-users'></use>
-                                </svg>
+
+                        <div class="input-wrapper">
+                            <div class="label">Endereço Coleta</div>
+                            <div class="input">
+                                <input type="text">
                             </div>
-                            <div class="text">Visualizar Usuários</div>
+                            <div class="helper-text">Endereço Completo</div>
                         </div>
-                    </a>
-                    <a href="selecionar-servico.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-services'></use>
-                                </svg>
+                        
+                        <div class="input-wrapper">
+                            <div class="label">Nome e Telefone do Responsável</div>
+                            <div class="input">
+                                <input type="text">
                             </div>
-                            <div class="text">Cadastrar Serviço</div>
+                            <div class="helper-text">Contatos do Responsável</div>
                         </div>
-                    </a>
-                    <a href="listar-servicos.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-view-services'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Visualizar Serviços</div>
-                        </div>
-                    </a>
-                </nav>
+                        
+                        <button type="submit">EDITAR</button>
+                    </form>
+                </div>
             </div>
         </div>
         
-
         <!-- start svg -->
 <svg>
     <defs>
@@ -343,8 +332,28 @@
         <script type="text/javascript" src="js/darkmode.js"></script>
         <script type="text/javascript" src="js/contraste.js"></script>
         <script>
+    
             document.addEventListener('DOMContentLoaded', function () {
-                document.querySelector('.site-content .title h1').innerHTML = `Bem vindo(a) ${localStorage.getItem('name')}!`;
+                let inputs = document.querySelectorAll('.input-wrapper');
+            
+                inputs.forEach(input => {
+                    if(input.querySelector('.input input').value.length === 0){
+                        input.classList.remove('active');
+                    }else{
+                        input.classList.add('active');
+                    }
+    
+                    input.querySelector('.input input').addEventListener('blur', () =>{
+                        if(input.querySelector('.input input').value.length === 0){
+                            input.classList.remove('active');
+                        }else{
+                            input.classList.add('active');
+                        }
+                    });
+                    input.querySelector('.input input').addEventListener('focus', () =>{
+                        input.classList.add('active');
+                    });
+                });  
             });
         </script>
     </body>

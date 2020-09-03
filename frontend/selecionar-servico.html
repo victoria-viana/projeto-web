@@ -1,98 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home - Rode Transportes</title>
-        <link href="styles/main.css" rel="stylesheet" type="text/css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Serviço - Rode Transportes</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+</head>
 
-    <body>
-        <div class="site-wrapper">
-            <header>
-                <nav>
-                    <div class="site-header">
-                        <div class="app-nav">
-                            <div class="menu-icon">
-                                <svg width='100%' height='100%' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-menu'></use>
+<body>
+    <div class="site-wrapper">
+        <header>
+            <nav>
+                <div class="site-header">
+                    <div class="app-nav">
+                        <div class="menu-icon">
+                            <svg width='100%' height='100%' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                <use href='#icon-menu'></use>
+                            </svg>
+                        </div>
+                        <a href="home.html">
+                            <div class="logo">
+                                <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="user-nav">
+                        <div class="profile-img">
+                            <img src="./assets/imgs/avatar.png" alt="Imagem de perfil" title="Imagem de perfil">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu" style="transform: translateX(-110%);">
+
+                    <a href="cadastrar-usuario.html">
+                        <div class="link">
+                            <div class="icon">
+                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-user'></use>
                                 </svg>
                             </div>
-                            <a href="home.html">
-                                <div class="logo">
-                                    <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
-                                </div>
-                            </a>
+                            <div class="text">Cadastrar Usuário</div>
                         </div>
+                    </a>
 
-                        <div class="user-nav">
-                            <div class="profile-img">
-                                <img src="./assets/imgs/avatar.png" alt="Imagem de perfil" title="Imagem de perfil">
+                    <a href="listar-usuarios.html">
+                        <div class="link">
+                            <div class="icon">
+                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-user'></use>
+                                </svg>
                             </div>
+                            <div class="text">Visualizar Usuários</div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="menu" style="transform: translateX(-110%);">
-
-                        <a href="cadastrar-usuario.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-add-user'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Cadastrar Usuário</div>
+                    <a href="selecionar-servico.html">
+                        <div class="link">
+                            <div class="icon">
+                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-services'></use>
+                                </svg>
                             </div>
-                        </a>
+                            <div class="text">Cadastrar Serviço</div>
+                        </div>
+                    </a>
 
-                        <a href="listar-usuarios.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-users'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Visualizar Usuários</div>
+                    <a href="listar-servicos.html">
+                        <div class="link">
+                            <div class="icon">
+                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-services'></use>
+                                </svg>
                             </div>
-                        </a>
+                            <div class="text">Visualizar Serviços</div>
+                        </div>
+                    </a>
+                </div>
 
-                        <a href="selecionar-servico.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-services'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Cadastrar Serviço</div>
-                            </div>
-                        </a>
+                <div class="profile" style="transform: translateX(110%);">
+                    <a href="/frontend/cadastrar-usuario.html">
+                        <div class="link">
+                            <div class="text">Configurações de Perfil</div>
+                        </div>
+                    </a>
 
-                        <a href="listar-servicos.html">
-                            <div class="link">
-                                <div class="icon">
-                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-services'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Visualizar Serviços</div>
+                    <a href="#">
+                        <div class="link" id="pageMode">
+                            <div class="icon" >
+                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-sun'></use>
+                                    <use href='#icon-moon'></use>
+                                </svg>
                             </div>
-                        </a>
-                    </div>
-
-                    <div class="profile" style="transform: translateX(110%);">
-                        
-                        
-                        <a href="#" >
-                            <div class="link" id="pageMode">
-                                <div class="icon" >
-                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-sun'></use>
-                                        <use href='#icon-moon'></use>
-                                    </svg>
-                                </div>
-                                <div class="text">Modo: Light</div>
-                            </div>
-                        </a>
+                            <div class="text">Modo: Light</div>
+                        </div>
+                    </a>
 
                         <a href="#">
                             <div class="link" id="pageContrast">
@@ -106,66 +110,48 @@
                             </div>
                         </a>
 
-                        <a href="#" onclick="logout()">
-                            <div class="link">
-                                <div class="text">Sair</div>
-                            </div>
-                        </a>
-                    </div>
-                </nav>
-            </header>
-
-            <div class="site-content">
-                <div class="title">
-                    <h1>Bem vindo, </h1>
+                    <a href="#">
+                        <div class="link">
+                            <div class="text">Sair</div>
+                        </div>
+                    </a>
                 </div>
-                <nav class="actions">
-                    <a href="cadastrar-usuario.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-add-user'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Cadastrar Usuário</div>
-                        </div>
-                    </a>
-                    <a href="listar-usuarios.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-users'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Visualizar Usuários</div>
-                        </div>
-                    </a>
-                    <a href="selecionar-servico.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-services'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Cadastrar Serviço</div>
-                        </div>
-                    </a>
-                    <a href="listar-servicos.html">
-                        <div class="action">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-view-services'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Visualizar Serviços</div>
-                        </div>
-                    </a>
-                </nav>
-            </div>
-        </div>
-        
+            </nav>
+        </header>
 
-        <!-- start svg -->
+        <div class="site-content">
+            <div class="title">
+                <h1>Seleção de Tipo de Serviço</h1>
+            </div>
+            <nav class="actions">
+                <a href="cadastrar-servicos-detran.html">
+                    <div class="action">
+                        <div class="icon">
+                            <svg width='100%' height='100%' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                <use href='#icon-detran'></use>
+                            
+                            </svg>
+                        </div>
+                        <div class="text">Detran</div>
+                    </div>
+                </a>
+                <a href="cadastrar-servicos-outros.html">
+                    <div class="action">
+                        <div class="icon">
+                            <svg width='100%' height='100%' viewBox='0 0 451.043 451.043' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                <use href='#icon-services-other'></use>
+                            </svg>
+                        </div>
+                        <div class="text">Outros</div>
+                    </div>
+                </a>
+            </nav>
+        </div>
+
+        
+    </div>
+    
+    <!-- start svg -->
 <svg>
     <defs>
         <symbol id="icon-add-user">
@@ -340,12 +326,8 @@
         </div>
 <script type="text/javascript" src="js/menu.js"></script>
 <script type="text/javascript" src="js/all.js"></script>
-        <script type="text/javascript" src="js/darkmode.js"></script>
-        <script type="text/javascript" src="js/contraste.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                document.querySelector('.site-content .title h1').innerHTML = `Bem vindo(a) ${localStorage.getItem('name')}!`;
-            });
-        </script>
-    </body>
+    <script type="text/javascript" src="js/darkmode.js"></script>
+    <script type="text/javascript" src="js/contraste.js"></script>
+    
+</body>
 </html>

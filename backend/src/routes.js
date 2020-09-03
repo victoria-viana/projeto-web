@@ -12,6 +12,7 @@ routes.get('/users', UserController.index);
 routes.post('/users', UserController.create);
 routes.post('/users/edit', UserController.edit);
 routes.post('/users/deactivate', UserController.deactivate);
+routes.post('/users/activate', UserController.activate);
 routes.delete('/users', UserController.remove);
 
 

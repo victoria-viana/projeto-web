@@ -25,7 +25,11 @@ module.exports = {
                         });
                         res.json({
                                 alert: 'Usuário atenticado!',
-                                token                            
+                                token,
+                                permission: user.permission,
+                                name: user.name,
+                                cpf: user.cpf,
+                                userphoto: `http://localhost:3333/uploads/${user.img}`,                            
                         });
                     } else {
                         res.status(401).json({

@@ -6,7 +6,7 @@ module.exports = {
         try {
             const users = await User.find();    
 
-            if(req.user && req.permission === 1){
+            if(req.user && req.permission === 1 || req.permission === 2){
                 return res.json(users);
             }else{
                 return res.status(401).json({
@@ -23,7 +23,7 @@ module.exports = {
             const {img, name, cpf, password, permission} = req.body;      
             const user = await User.findOne({ cpf: cpf }); 
 
-            if(req.user && req.permission === 1){
+            if(req.user && req.permission === 1 || req.permission === 2){
                 if(!user){
                     const newUser = await User.create({
                         img,
@@ -57,7 +57,7 @@ module.exports = {
         
         let user = await User.findOne({ cpf: cpf });
 
-        if(req.user && req.permission === 1){
+        if(req.user && req.permission === 1 || req.permission === 2){
             if(user != null){
 
                 await User.findOneAndUpdate({
@@ -66,7 +66,7 @@ module.exports = {
                     $set: {
                         img,
                         name,
-                        password,
+                        password: bcrypt.hashSync(password, 10, (err, hash) => { return hash;}),
                         permission,
                         isActive
                     }
@@ -92,11 +92,11 @@ module.exports = {
     },
     async deactivate(req, res){
 
-        const {img, name, cpf, password, permission} = req.body;   
+        const {cpf} = req.body;   
         
         let user = await User.findOne({ cpf: cpf });
 
-        if(req.user && req.permission === 1){
+        if(req.user && req.permission === 1 || req.permission === 2){
             if(user != null){
 
                 await User.findOneAndUpdate({
@@ -125,13 +125,48 @@ module.exports = {
 
         
     },
+    async activate(req, res){
+
+        const {cpf} = req.body;   
+        
+        let user = await User.findOne({ cpf: cpf });
+
+        if(req.user && req.permission === 1 || req.permission === 2){
+            if(user != null){
+
+                await User.findOneAndUpdate({
+                    cpf,
+                }, {
+                    $set: {
+                        isActive: true
+                    }
+                }, {
+                    new: true 
+                }, (err, doc) => {
+                    if ( err ) {
+                        return res.json({error: "Erro, não foi possível ativar este usuário."});
+                    }
+                    return res.json({alert: 'Usuário ativado com sucesso!'});
+                });
+            }else{
+                return res.json({error: "Erro, não foi possível ativar este usuário."});
+            }
+        }else{
+            return res.status(401).json({
+                error: 'Você não tem autorização para ativar usuários.'
+            })
+        }
+
+
+        
+    },
     async remove(req, res){
 
         const { cpf } = req.body;
 
         const remove = await User.deleteOne({cpf: cpf});
 
-        if(req.user && req.permission === 1){
+        if(req.user && req.permission === 1 || req.permission === 2){
             if(remove.deletedCount > 0){
                 return res.json({ alert: `Usuário foi deletado com sucesso!`});
             }else{
