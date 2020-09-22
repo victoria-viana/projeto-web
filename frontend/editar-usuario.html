@@ -142,7 +142,7 @@
                         <div class="input-wrapper">
                             <div class="label">CPF</div>
                             <div class="input">
-                                <input type="text">
+                                <input type="text" class="cpf">
                             </div>
                             <div class="helper-text">CPF</div>
                         </div>
@@ -375,6 +375,10 @@
                     });
                 });  
             });
+        </script>
+        <script src="js/vm-min.js"></script>
+        <script>
+            VMasker(document.querySelector(".cpf")).maskPattern("999.999.999 - 99");
         </script>
     </body>
 </html>
