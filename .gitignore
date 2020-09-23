@@ -3,6 +3,5 @@ node_modules
 backend/src/tmp
 backend/node_modules/
 backend/src/config/
-backend/bckp
 backend/.env
 
