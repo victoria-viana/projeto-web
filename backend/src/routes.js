@@ -10,15 +10,15 @@ routes.post('/login', AutenticateController.autenticate);
 
 routes.get('/users', UserController.index);
 routes.post('/users', UserController.create);
-routes.post('/users/edit', UserController.edit);
-routes.post('/users/deactivate', UserController.deactivate);
-routes.post('/users/activate', UserController.activate);
+routes.put('/users/edit', UserController.edit);
+routes.patch('/users/deactivate', UserController.deactivate);
+routes.patch('/users/activate', UserController.activate);
 routes.delete('/users', UserController.remove);
 
 
 routes.get('/service', ServiceController.index);
 routes.post('/service', ServiceController.create);
-routes.post('/service/edit', ServiceController.edit);
+routes.put('/service/edit', ServiceController.edit);
 routes.delete('/service', ServiceController.remove);
 
 

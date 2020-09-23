@@ -5,7 +5,6 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const routes = require('./routes');
 const path = require('path');
-const port = process.env.PORT || 3333;
 
 const app = express();
 
@@ -28,12 +27,12 @@ try {
         useUnifiedTopology: true,
     });
 
-    app.listen(port, () => {
+    app.listen(3333, () => {
         console.log("Server started...");
     });
 
     app1.listen(5555, () => {
-        console.log("Server started...");
+        console.log("Server App started...");
     });
 } catch (error) {
     console.log('Não foi possível se conectar com o banco de dados');

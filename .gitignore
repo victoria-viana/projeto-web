@@ -1,5 +1,6 @@
 .vscode
 node_modules
+bckp
 backend/src/tmp
 backend/node_modules/
 backend/src/config/
