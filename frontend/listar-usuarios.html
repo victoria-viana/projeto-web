@@ -139,59 +139,7 @@
                 </div>
 
                 <div class="results-wrapper">
-                    <div class="result disabled">
-                        <div class="name">Fulano de tal</div>
-                        <div class="actions">
-                            <div class="edit">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-edit-box'></use>
-                                </svg>
-                            </div>
-                            <div class="desable">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-trash'></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="result">
-                        <div class="name">Fulano de tal</div>
-                        <div class="actions">
-                            <a href="editar-usuario.html">
-                                <div class="edit">
-                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-edit-box'></use>
-                                    </svg>
-                                </div>
-                            </a>
-                            
-                            <div class="desable">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-trash'></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="result">
-                        <div class="name">Fulano de tal</div>
-                        <div class="actions">
-                            <a href="editar-usuario.html">
-                                <div class="edit">
-                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                        <use href='#icon-edit-box'></use>
-                                    </svg>
-                                </div>
-                            </a>
-                            
-                            <div class="desable">
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-trash'></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </div>
@@ -358,6 +306,80 @@
     </defs>
 </svg>
 <!-- end svg -->
+
+<script src="js/handlebars.min-v4.7.6.js"></script>
+
+<script>
+    function desableUser(cpf){
+        myHeaders = new Headers({
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${localStorage.getItem('token')}`,
+        });
+        fetch('http://localhost:3333/users/deactivate', {
+        method: 'post',
+        headers: myHeaders,
+        body: JSON.stringify({
+            cpf: cpf
+        })
+        }).then(function(response) {
+            return response.json();
+        }).then(function(response){
+            context = response;
+            if(response.error){
+                showModal(response.error);
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            }else{
+                showModal(response.alert);
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            }
+        });
+    }
+</script>
+
+<script id="users-template" type="text/x-handlebars-template">
+    {{#each this }}
+        <div class="result {{ checkIsEnabled this.isActive }}">
+            <div class="name">{{ this.name }}</div>
+            <div class="actions">
+                <a href="editar-usuario.html">
+                    <div class="edit">
+                        <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                            <use href="#icon-edit-box"></use>
+                        </svg>
+                    </div>
+                </a>
+                
+                <div class="desable" onclick="desableUser({{ this.cpf }})">
+                    <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                        <use href="#icon-trash"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+
+<script>
+    let context = null;
+    function showUsers(context) {
+        let source = document.getElementById("users-template").innerHTML;
+        Handlebars.registerHelper('checkIsEnabled', function (value) {
+            if(!value){
+                return 'disabled';
+            }
+        });
+        let template = Handlebars.compile(source);
+        let html = template(context);
+        document.querySelector('.results-wrapper').innerHTML = html;
+    }
+</script>
+
+
 <div class="overlay">
             <div class="modal">
                 <div class="close" onclick="closeModal()">
@@ -395,6 +417,30 @@
                         input.classList.add('active');
                     });
                 });  
+
+
+                function getUsers() {
+                    myHeaders = new Headers({
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                    });
+                    fetch('http://localhost:3333/users', {
+                    method: 'get',
+                    headers: myHeaders,
+                    }).then(function(response) {
+                        return response.json();
+                    }).then(function(response){
+                        context = response;
+                        if(response.error){
+                            showModal(response.error);
+                        }else{
+                            showUsers(context);
+                        }
+                    });
+                }
+
+                getUsers();
+
             });
         </script>
     </body>

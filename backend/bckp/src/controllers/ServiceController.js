@@ -5,7 +5,7 @@ module.exports = {
         try {
             const services = await Service.find();    
 
-            if(req.user && req.permission === 1 || req.permission === 2 || req.permission === 3){
+            if(req.user && req.permission === 1 || req.permission === 2){
                 return res.json(services);
             }else{
                 res.status(401).json({

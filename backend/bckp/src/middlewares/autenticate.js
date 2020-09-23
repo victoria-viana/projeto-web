@@ -3,6 +3,7 @@ require('dotenv').config();
 
 module.exports = (req, res, next) =>{
 
+
     if(req.url === '/login' || req.url.includes('/uploads')){
         return next();
     }else{
