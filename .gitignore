@@ -3,6 +3,7 @@ node_modules
 backend/src/tmp
 backend/node_modules/
 backend/src/config/
+.env
 backend/.env
 bckp-bot/node_modules
 bckp-bot/.env
