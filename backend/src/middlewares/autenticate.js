@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 module.exports = (req, res, next) =>{
-
+    console.log(req.url);
     if(req.url === '/login' || req.url.includes('/uploads')){
         return next();
     }else{

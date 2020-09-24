@@ -1,0 +1,22 @@
+{
+  "name": "projeto-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evertfreit77/projeto-web.git"
+  },
+  "author": "Everton Fr.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evertfreit77/projeto-web/issues"
+  },
+  "homepage": "https://github.com/evertfreit77/projeto-web#readme",
+  "dependencies": {
+    "pm2": "^4.4.1"
+  }
+}
