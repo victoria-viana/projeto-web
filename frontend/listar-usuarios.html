@@ -316,7 +316,7 @@
             "Authorization": `Bearer ${localStorage.getItem('token')}`,
         });
         fetch('http://localhost:3333/users/deactivate', {
-        method: 'post',
+        method: 'PATCH',
         headers: myHeaders,
         body: JSON.stringify({
             cpf: cpf
@@ -353,7 +353,7 @@
                     </div>
                 </a>
                 
-                <div class="desable" onclick="desableUser({{ this.cpf }})">
+                <div class="desable" onclick="desableUser('{{ this.cpf }}')">
                     <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
                         <use href="#icon-trash"></use>
                     </svg>
