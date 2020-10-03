@@ -9,6 +9,7 @@ routes.use(autenticateMiddleware);
 routes.post('/login', AutenticateController.autenticate);
 
 routes.get('/users', UserController.index);
+routes.get('/user/:cpf', UserController.show);
 routes.post('/users', UserController.create);
 routes.put('/users/edit', UserController.edit);
 routes.patch('/users/deactivate', UserController.deactivate);

@@ -134,7 +134,7 @@
                         <div class="input-wrapper">
                             <div class="label">Usuário</div>
                             <div class="input">
-                                <input type="text">
+                                <input type="text" class='name'>
                             </div>
                             <div class="helper-text">Nome completo</div>
                         </div>
@@ -142,7 +142,7 @@
                         <div class="input-wrapper">
                             <div class="label">CPF</div>
                             <div class="input cpf">
-                                <input type="text">
+                                <input type="text" class="cpf">
                             </div>
                             <div class="helper-text">CPF</div>
                         </div>
@@ -150,7 +150,7 @@
                         <div class="input-wrapper">
                             <div class="label">Senha</div>
                             <div class="input">
-                                <input type="password">
+                                <input class="password" type="password">
                             </div>
                             <div class="helper-text">use pelo menos 6 caracteres</div>
                         </div>
@@ -158,12 +158,12 @@
                         <div class="input-wrapper">
                             <div class="label">Permissão</div>
                             <div class="input">
-                                <input type="text">
+                                <input type="text" class="permission">
                                 <div class="icon"></div>
                             </div>
                         </div>
 
-                        <button type="submit">EDITAR</button>
+                        <div style="width: 100px" onclick="sendUserData()" class="btn">EDITAR</div>
                     </form>
                 </div>
             </div>
@@ -376,6 +376,79 @@
                 });  
             });
         </script>
+
+        <script>
+            function setAllFieldsActive(){
+                let fields = document.querySelectorAll('.input-wrapper');
+
+                fields.forEach(field => {
+                    field.classList.add('active');
+                });
+            }
+
+            function setUserData(response){
+                //document.querySelector('.').value = response.img;
+                document.querySelector('.input .cpf').value = response.cpf;
+                document.querySelector('.input .name').value = response.name;
+                document.querySelector('.input .password').value = '';
+                document.querySelector('.input .permission').value = response.permission;
+            }
+
+            function sendUserData(){
+                myHeaders = new Headers({
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                });
+                fetch(`http://localhost:3333/users/edit`, {
+                method: 'put',
+                headers: myHeaders,
+                body: JSON.stringify({
+                    cpf: document.querySelector('.input .cpf').value,
+                    name: document.querySelector('.input .name').value,
+                    password: document.querySelector('.input .password').value,
+                    permission: document.querySelector('.input .permission').value,
+                    isActive: true,
+                })
+                }).then(function(response) {
+                    return response.json();
+                }).then(function(response){
+                    
+                    if(response.error){
+                        showModal(response.error);
+                    }else{
+                        showModal(response.alert);
+                        setTimeout(() => {
+                            window.location.href = '/listar-usuarios.html';
+                        }, 2000);
+                    }
+                });
+            }
+
+            function getUserData(cpf){
+                myHeaders = new Headers({
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                });
+                fetch(`http://localhost:3333/user/${cpf}`, {
+                method: 'get',
+                headers: myHeaders,
+                }).then(function(response) {
+                    return response.json();
+                }).then(function(response){
+                    
+                    if(response.error){
+                        showModal(response.error);
+                    }else{
+                        setAllFieldsActive();
+                        setUserData(response);
+                    }
+                });
+            }
+            let cpf = window.location.search.split('?user=')[1]
+            console.log(cpf);
+            getUserData(cpf);
+        </script>
+
+
         <script src='./js/vm-min.js'></script>
         <script>
             VMasker(document.querySelector('.input.cpf')).maskPattern('999.999.999-99');

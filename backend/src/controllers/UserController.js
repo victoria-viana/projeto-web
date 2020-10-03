@@ -18,6 +18,30 @@ module.exports = {
             return res.json(error);
         }
     },
+    async show(req, res){
+        const { cpf } = req.params;
+
+        try {
+            const user = await User.findOne({ cpf });   
+
+            if(req.user && req.permission === 1 || req.permission === 2){
+                if(user){
+                    return res.json(user);
+                }else{
+                    return res.status(401).json({
+                        error: 'Usuário não encontrado.'
+                    })    
+                }
+            }else{
+                return res.status(401).json({
+                    error: 'Você não tem autorização para ver usuários.'
+                })
+            }
+            
+        } catch (error) {
+            return res.json(error);
+        }
+    },
     async create(req, res){
         try {
             const {img, name, cpf, password, permission} = req.body;      
