@@ -1,18 +1,26 @@
 module.exports = {
   apps : [{
-    name: 'SERVER',
-    script: './backend/src/index.js',
+    name: 'SERVER FRONTEND',
+    script: './backend/src/server-front.js',
     instances: 1,
     autorestart: true,
     watch: true,
   }, 
+  {
+    name: 'SERVER BACKEND',
+    script: './backend/src/server-back.js',
+    instances: 1,
+    autorestart: true,
+    watch: true,
+  },
   {
     name: 'BACKUP-BOT',
     script: './bckp-bot/src/index.js',
     instances: 1,
     autorestart: true,
     watch: true,
-  }],
+  }
+  ],
   // deploy : {
   //   production : {
   //     user : 'node',
