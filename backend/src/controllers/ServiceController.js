@@ -17,6 +17,30 @@ module.exports = {
             return res.json(error);
         }
     },
+    async show(req, res){
+        const { code } = req.params;
+
+        try {
+            const service = await Service.findOne({ code });   
+
+            if(req.user && req.permission === 1 || req.permission === 2|| req.permission === 3){
+                if(service){
+                    return res.json(service);
+                }else{
+                    return res.status(401).json({
+                        error: 'Serviço não encontrado.'
+                    })    
+                }
+            }else{
+                return res.status(401).json({
+                    error: 'Você não tem autorização para ver serviços.'
+                })
+            }
+            
+        } catch (error) {
+            return res.json(error);
+        }
+    },
     async create(req, res){
         try {
             const {

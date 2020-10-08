@@ -359,9 +359,9 @@
 </script>
 <script id="entry-template-colaborador" type="text/x-handlebars-template">
     {{#each this }}
-        <a href="visualizar-servico-{{ checkType this.type }}.html">
+        <a href="visualizar-servico.html?service={{ this.code }}">
             <div class="result">
-                <div class="name">Serviço #ROD{{ this.code }} - {{ checkType this.type }}</div>
+                <div class="name">Serviço #{{ this.code }} - {{ checkType this.type }}</div>
                 <div class="actions">
                     
                 </div>

@@ -362,7 +362,7 @@
                 method: 'post',
                 headers: myHeaders,
                 body: JSON.stringify({                    
-                    code: "1",
+                    code: `ROD${Date.now()}`,
                     type: true,
                     clientName: document.querySelector('#service-detran input.client').value,
                     colectAddress: document.querySelector('#service-detran input.colect').value,

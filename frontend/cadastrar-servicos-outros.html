@@ -382,7 +382,7 @@
                 method: 'post',
                 headers: myHeaders,
                 body: JSON.stringify({                    
-                    code: "2",
+                    code: `ROD${Date.now()}`,
                     type: false,
                     colectAddress: document.querySelector('#service-other input.colect').value,
                     destinationAddress: document.querySelector('#service-other input.destination').value,

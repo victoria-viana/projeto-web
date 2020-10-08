@@ -24,6 +24,20 @@ body{
     background-color: rgba(0,0,0,.7);
 }
 
+.data{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.data .value a{
+    text-decoration: underline;
+}
+
+.key{
+    font-size: 20px;
+    margin-right: 3px;
+}
 
 
 .overlay .modal{

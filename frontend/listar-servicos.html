@@ -341,7 +341,7 @@
 <script id="services-template" type="text/x-handlebars-template">
     {{#each this }}
         <div class="result">
-            <div class="name">Serviço #ROD{{ this.code }} - {{ checkType this.type }}</div>
+            <div class="name">Serviço #{{ this.code }} - {{ checkType this.type }}</div>
             <div class="actions">
                 <a href="editar-servico-detran.html">
                     <div class="edit">
@@ -351,7 +351,7 @@
                     </div>
                 </a>
                 
-                <div class="delete" onclick="deleteService({{ this.code }})">
+                <div class="delete" onclick="deleteService('{{ this.code }}')">
                     <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
                         <use href='#icon-trash'></use>
                     </svg>

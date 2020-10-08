@@ -18,6 +18,7 @@ routes.delete('/users', UserController.remove);
 
 
 routes.get('/service', ServiceController.index);
+routes.get('/service/:code', ServiceController.show);
 routes.post('/service', ServiceController.create);
 routes.put('/service/edit', ServiceController.edit);
 routes.delete('/service', ServiceController.remove);

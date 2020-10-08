@@ -1,69 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotografia Carros - Rode Transportes</title>
-    <link rel="stylesheet" href="styles/main.css" type="text/css">
-    <link href="styles/forms.css" rel="stylesheet" type="text/css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visualizar Serviço</title>
+        <link href="styles/main.css" rel="stylesheet" type="text/css">
+        <link href="styles/forms.css" rel="stylesheet" type="text/css">
+    </head>
 
-<body>
-    <div class="site-wrapper">
-        <header>
-            <nav>
-                <div class="site-header">
-                    <div class="app-nav">
-                        <div class="menu-icon">
-                            <svg width='100%' height='100%' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                <use href='#icon-menu'></use>
-                            </svg>
+    <body>
+        <div class="site-wrapper">
+            <header>
+                <nav>
+                    <div class="site-header">
+                        <div class="app-nav">
+                            <div class="menu-icon">
+                                <svg width='100%' height='100%' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                    <use href='#icon-menu'></use>
+                                </svg>
+                            </div>
+                            <a href="home.html">
+                                <div class="logo">
+                                    <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
+                                </div>
+                            </a>
                         </div>
-                        <a href="home.html">
-                            <div class="logo">
-                                <img src="./assets/imgs/logo-menu-rode.png" alt="Logo Rode" title="Logo Rode">
+
+                        <div class="user-nav">
+                            <div class="profile-img">
+                                <img src="./assets/imgs/avatar.png" alt="Imagem de perfil" title="Imagem de perfil">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu" style="transform: translateX(-110%);">
+
+                        <a href="cadastrar-usuario.html">
+                            <div class="link">
+                                <div class="icon">
+                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-add-user'></use>
+                                    </svg>
+                                </div>
+                                <div class="text">Cadastrar Usuário</div>
+                            </div>
+                        </a>
+
+                        <a href="listar-usuarios.html">
+                            <div class="link">
+                                <div class="icon">
+                                    <svg width='100%' height='100%' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-users'></use>
+                                    </svg>
+                                </div>
+                                <div class="text">Visualizar Usuários</div>
+                            </div>
+                        </a>
+
+                        <a href="selecionar-servico.html">
+                            <div class="link">
+                                <div class="icon">
+                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-services'></use>
+                                    </svg>
+                                </div>
+                                <div class="text">Cadastrar Serviço</div>
+                            </div>
+                        </a>
+
+                        <a href="listar-servicos.html">
+                            <div class="link">
+                                <div class="icon">
+                                    <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-services'></use>
+                                    </svg>
+                                </div>
+                                <div class="text">Visualizar Serviços</div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="user-nav">
-                        <div class="profile-img">
-                            <img src="./assets/imgs/avatar.png" alt="Imagem de perfil" title="Imagem de perfil">
-                        </div>
-                    </div>
-                </div>
+                    <div class="profile" style="transform: translateX(110%);">
+                        
 
-                <div class="menu" style="transform: translateX(-110%);">
-                    <a href="home.html">
-                        <div class="link">
-                            <div class="icon">
-                                <svg width='100%' height='100%' viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-services'></use>
-                                </svg>
+                        <a href="#">
+                            <div class="link" id="pageMode">
+                                <div class="icon" >
+                                    <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
+                                        <use href='#icon-sun'></use>
+                                        <use href='#icon-moon'></use>
+                                    </svg>
+                                </div>
+                                <div class="text">Modo: Light</div>
                             </div>
-                            <div class="text">Visualizar Serviços</div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="profile" style="transform: translateX(110%);">
-                    <a href="#">
-                        <div class="link">
-                            <div class="text">Configurações de Perfil</div>
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div class="link" id="pageMode">
-                            <div class="icon" >
-                                <svg width='100%' height='100%' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMinYMin'>
-                                    <use href='#icon-sun'></use>
-                                    <use href='#icon-moon'></use>
-                                </svg>
-                            </div>
-                            <div class="text">Modo: Light</div>
-                        </div>
-                    </a>
+                        </a>
 
                         <a href="#">
                             <div class="link" id="pageContrast">
@@ -77,66 +107,36 @@
                             </div>
                         </a>
 
+                        <a href="#" onclick="logout()">
+                            <div class="link">
+                                <div class="text">Sair</div>
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            </header>
 
-                    <a href="#">
-                        <div class="link">
-                            <div class="text">Sair</div>
+            <div class="site-content">
+                <div class="title">
+                    <h1></h1>
+                </div>
+
+                <div class="results-wrapper"></div>
+
+                <div class="form-wrapper new">
+                    <form>
+                        <div class="button-wrapper">
+                            <a href="/fotografia.html">
+                                <div class="btn">INICIAR FOTOGRAFIA</div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-            </nav>
-        </header>
-
-        <div class="site-content">
-            <div class="title"><h1>Fotografia - Carros</h1></div>
-            <nav class="photos">
-
-                <div class="photos-wrapper">
-                    <div class="photo">
-                        <div class="photo-wrapper"></div>
-                        <div class="input"><input type="file" class="input-file"></div>
-                        <div class = "text">Foto 1</div>
-                    </div> 
-                    <div class="photo">
-                        <div class="photo-wrapper"></div>
-                        <div class="input"><input type="file" class="input-file"></div>
-                        <div class = "text">Foto 2</div>
-                    </div> 
-                    <div class="photo">
-                        <div class="photo-wrapper"></div>
-                        <div class="input"><input type="file" class="input-file"></div>
-                        <div class = "text">Foto 3</div>
-                    </div> 
-                    <div class="photo">
-                        <div class="photo-wrapper"></div>
-                        <div class="input"><input type="file" class="input-file"></div>
-                        <div class = "text">Foto 4</div>
-                    </div> 
-                    <div class="photo">
-                        <div class="photo-wrapper"></div>
-                        <div class="input"><input type="file" class="input-file"></div>
                         
-                        <div class = "text">Foto 5</div>
-                    </div> 
-                    <div class="photo">
-                        <div class="photo-wrapper"></div>
-                        <div class="input"><input type="file" class="input-file"></div>
-                        <div class = "text">Foto 6</div>
-                    </div> 
+                    </form>
                 </div>
-                
-                <div class="photos-button">
-                    <textarea  placeholder="Observações"></textarea>
-                    <button type="submit" onclick="sendPhotos()">Finalizar fotografia</button>
-                </div>
-                             
-            </nav>
+            </div>
         </div>
-
         
-    </div>
-    
-    <!-- start svg -->
+        <!-- start svg -->
 <svg>
     <defs>
         <symbol id="icon-add-user">
@@ -297,6 +297,83 @@
 
     </defs>
 </svg>
+
+
+<script src="js/handlebars.min-v4.7.6.js"></script>
+
+
+<script id="service-template" type="text/x-handlebars-template">
+    <div class="service-wrapper">
+
+        <div class="data">
+            <div class="key">Tipo de serviço:</div>
+            <div class="value">{{ checkType type }}</div>
+        </div>
+
+        {{#if type }}
+            <div class="data">
+                <div class="key">Dados do cliente:</div>
+                <div class="value">{{ clientName }}</div>
+            </div>
+
+            <div class="data">
+                <div class="key">Endereço de coleta:</div>
+                <div class="value"><a href='https://www.google.com/maps/search/{{colectAddress}}'>{{ colectAddress }}</a></div>
+            </div>
+
+            <div class="data">
+                <div class="key">Endereço de entrega:</div>
+                <div class="value"><a href='https://www.google.com/maps/search/{{destinationAddress}}'>{{ destinationAddress }}</a></div>
+            </div>
+        {{else}}
+            <div class="data">
+                <div class="key">Dados do cliente:</div>
+                <div class="value">{{ vehicle.owner.name }}</div>
+            </div>
+
+            <div class="data">
+                <div class="key">Endereço de coleta:</div>
+                <div class="value"><a href='https://www.google.com/maps/search/{{colectAddress}}'>{{ colectAddress }}</a></div>
+            </div>
+
+            <div class="data">
+                <div class="key">Endereço de entrega:</div>
+                <div class="value"><a href='https://www.google.com/maps/search/{{destinationAddress}}'>{{ destinationAddress }}</a></div>
+            </div>
+
+            <div class="data">
+                <div class="key">Dados do veículo:</div>
+                <div class="value">{{ vehicle.model }}, cor: {{ vehicle.color }} - {{ vehicle.plate }}</div>
+            </div>
+        {{/if}}
+        
+        
+        
+        
+        
+    </div>    
+</script>
+
+
+<script>
+    let context = null;
+    function showService(context) {
+        let source = document.getElementById("service-template").innerHTML;
+        Handlebars.registerHelper('checkType', function (value) {
+            if(!value){
+                return 'Outros';
+            }else{
+                return 'Detran';
+            }
+        });
+        let template = Handlebars.compile(source);
+        let html = template(context);
+        console.log(html);
+        document.querySelector('.results-wrapper').innerHTML = html;
+    }
+</script>
+
+
 <!-- end svg -->
 <div class="overlay">
             <div class="modal">
@@ -311,54 +388,59 @@
         </div>
 <script type="text/javascript" src="js/menu.js"></script>
 <script type="text/javascript" src="js/all.js"></script>
-    <script type="text/javascript" src="js/darkmode.js"></script>
-    <script type="text/javascript" src="js/contraste.js"></script>
-    <script>
-
-        function getRandomInt(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min)) + min;
-        }
-
-        //por enquanto simula do post das fotos
-        function sendPhotos() {
-            showLoadingModal('Enviando arquivos...');
-            setTimeout(() => {
-                closeModal();
-                showSendModal('Arquivos enviados com sucesso');
-            }, getRandomInt(2500, 3500) );
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-               let inputs = document.querySelectorAll('.photos .photo');
-               inputs.forEach(input => {
-                   input.addEventListener('click', () => {
-                        input.querySelector('.input input').click();
-                   });
-               });
-
-               let inputWr = document.querySelectorAll('.photos .photo .input input');
-
-               inputWr.forEach(input => {
-                    input.addEventListener('change', () => {
-                        let file = input.files[0];
-                        let name = input.files[0].name;
-                        const reader = new FileReader();
-                        reader.onloadend = function () {
-                            input.parentElement.parentElement.querySelector('.photo-wrapper').style.backgroundImage = `url('${reader.result}')`;
-                        }
-                        if (file) {
-                            reader.readAsDataURL(file);
-                        } else {
+        <script type="text/javascript" src="js/darkmode.js"></script>
+        <script type="text/javascript" src="js/contraste.js"></script>
+        <script>
+    
+            document.addEventListener('DOMContentLoaded', function () {
+                let inputs = document.querySelectorAll('.input-wrapper');
+            
+                inputs.forEach(input => {
+                    if(input.querySelector('.input input').value.length === 0){
+                        input.classList.remove('active');
+                    }else{
+                        input.classList.add('active');
+                    }
+    
+                    input.querySelector('.input input').addEventListener('blur', () =>{
+                        if(input.querySelector('.input input').value.length === 0){
+                            input.classList.remove('active');
+                        }else{
+                            input.classList.add('active');
                         }
                     });
+                    input.querySelector('.input input').addEventListener('focus', () =>{
+                        input.classList.add('active');
+                    });
+                });  
+            });
+        </script>
+        <script>
+            function getServiceData(cpf){
+                myHeaders = new Headers({
+                    "Authorization": `Bearer ${localStorage.getItem('token')}`,
                 });
-
-           });
-           
-       
-   </script>
-    
-</body>
+                fetch(`http://localhost:3333/service/${cpf}`, {
+                method: 'get',
+                headers: myHeaders,
+                }).then(function(response) {
+                    return response.json();
+                }).then(function(response){
+                    
+                    if(response.error){
+                        showModal(response.error);
+                    }else{
+                        context = response;
+                        document.querySelector("body > div.site-wrapper > div > div.title > h1").innerHTML = `#${response.code}`;
+                        showService(context);
+                        console.log(response);
+                        //setUserData(response);
+                    }
+                });
+            }
+            let service = window.location.search.split('?service=')[1]
+            
+            getServiceData(service);
+        </script>
+    </body>
 </html>
