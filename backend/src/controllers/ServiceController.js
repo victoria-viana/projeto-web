@@ -17,6 +17,25 @@ module.exports = {
             return res.json(error);
         }
     },
+    async indexCol(req, res){
+
+        const { col } = req.params;
+
+        try {
+            const services = await Service.find({ collaborator: { id: col }, });    
+
+            if(req.user && req.permission === 1 || req.permission === 2 || req.permission === 3){
+                return res.json(services);
+            }else{
+                res.status(401).json({
+                    error: 'Você não tem autorização para visualizar serviços.'
+                })
+            }
+            
+        } catch (error) {
+            return res.json(error);
+        }
+    },
     async show(req, res){
         const { code } = req.params;
 

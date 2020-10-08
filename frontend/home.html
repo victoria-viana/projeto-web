@@ -435,11 +435,12 @@
                 }
 
                 function getServices() {
+                    let cpf = localStorage.getItem('cpf');
                     myHeaders = new Headers({
                         "Content-Type": "application/json",
                         "Authorization": `Bearer ${localStorage.getItem('token')}`,
                     });
-                    fetch('http://localhost:3333/service', {
+                    fetch(`http://localhost:3333/service-by-col/${cpf}`, {
                     method: 'get',
                     headers: myHeaders,
                     }).then(function(response) {
